@@ -45,20 +45,6 @@
             }
           },
           {
-            "name": "path",
-            "in": "query",
-            "required": true,
-            "description": "Operation path",
-            "type": "string"
-          },
-          {
-            "name": "http_method",
-            "in": "query",
-            "required": true,
-            "description": "Operation HTTP method",
-            "type": "string"
-          },
-          {
             "name": "data",
             "in": "query",
             "required": true,
