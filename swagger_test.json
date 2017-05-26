@@ -32,24 +32,12 @@
         "description": "",
         "parameters": [
           {
-            "name": "action",
+            "name": "operations",
             "in": "body",
-            "description": "Company registration number ",
-            "schema": {
-              "type": "string",
-              "enum": [
-                "follow",
-                "unfollow",
-                "block"
-              ]
-            }
-          },
-          {
-            "name": "data",
-            "in": "query",
             "required": true,
-            "description": "Operation HTTP body",
-            "type": "string"
+            "schema": {
+              "$ref": "#/definitions/_batch"
+            }
           },
           {
             "name": "Host",
@@ -89,18 +77,34 @@
               "application/json": "{}"
             }
           },
+          "200": {
+            "description": "OK",
+            "examples": {
+              "application/json": "{\n  \"operations\": [\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"499\",\n        \"ETag\": \"W/\\\"ceb0d7c99e7e882d30b3d665dd1dc65b\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"cfcd2b1c-5db7-4623-a66d-b8ea06aefc1e\",\n        \"X-Runtime\": \"0.195514\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T16:17:03.000+01:00\",\n        \"updated_at\": \"2017-05-26T16:17:04.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    },\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"498\",\n        \"ETag\": \"W/\\\"ceb0d7c99e7e882d30b3d665dd1dc65b\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"4e999054-6e7b-470c-91b3-c6c3f01feb29\",\n        \"X-Runtime\": \"0.031476\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T16:17:03.000+01:00\",\n        \"updated_at\": \"2017-05-26T16:17:04.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    }\n  ]\n}"
+            }
+          },
           "413": {
             "description": "Request entity too large",
             "examples": {
               "application/json": "{\n  \"errors\": [\n    {\n      \"code\": 413,\n      \"title\": \"Too many requests.\",\n      \"detail\": \"The request is larger than the server is willing or able to process. Please, retry with a smaller request.\",\n      \"source\": {\n        \"pointer\": \"/base\"\n      }\n    }\n  ]\n}"
             }
-          },
-          "200": {
-            "description": "OK",
-            "examples": {
-              "application/json": "{\n  \"operations\": [\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"499\",\n        \"ETag\": \"W/\\\"b17d294f47b0380c755b0cc8f1c3a741\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"6afdd463-c60c-46e5-abeb-dd26acbcdd53\",\n        \"X-Runtime\": \"0.216340\"\n      },\n      \"body\": {\n        \"id\": 18,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 18,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000018\",\n        \"created_at\": \"2017-05-26T14:58:53.000+01:00\",\n        \"updated_at\": \"2017-05-26T14:58:53.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/18\"\n    },\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"498\",\n        \"ETag\": \"W/\\\"b17d294f47b0380c755b0cc8f1c3a741\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"228b72f1-7c1c-4ed8-b049-f19d46fc46bc\",\n        \"X-Runtime\": \"0.033565\"\n      },\n      \"body\": {\n        \"id\": 18,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 18,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000018\",\n        \"created_at\": \"2017-05-26T14:58:53.000+01:00\",\n        \"updated_at\": \"2017-05-26T14:58:53.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/18\"\n    }\n  ]\n}"
-            }
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "_batch": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "http_method": {
+          "type": "string"
+        },
+        "data": {
+          "type": "string"
         }
       }
     }
