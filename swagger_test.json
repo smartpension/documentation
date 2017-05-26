@@ -20,6 +20,284 @@
     }
   },
   "paths": {
+    "/companies": {
+      "post": {
+        "summary": "Companies/Create",
+        "tags": [
+          "Companies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "registration_number",
+            "in": "body",
+            "required": true,
+            "description": "Company registration number ",
+            "type": "string"
+          },
+          {
+            "name": "legal_structure",
+            "in": "body",
+            "required": true,
+            "description": "Company legal structure",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "body",
+            "required": true,
+            "description": "Company name",
+            "type": "string"
+          },
+          {
+            "name": "contact_id",
+            "in": "body",
+            "required": true,
+            "description": "Company contact ID",
+            "type": "string"
+          },
+          {
+            "name": "contact_type",
+            "in": "body",
+            "required": true,
+            "description": "Company contact type",
+            "type": "string"
+          },
+          {
+            "name": "reg_address1",
+            "in": "body",
+            "required": true,
+            "description": "Company registration address 1",
+            "type": "string"
+          },
+          {
+            "name": "reg_address2",
+            "in": "body",
+            "required": true,
+            "description": "Company registration address 2",
+            "type": "string"
+          },
+          {
+            "name": "reg_address3",
+            "in": "body",
+            "required": true,
+            "description": "Company registration address 3",
+            "type": "string"
+          },
+          {
+            "name": "reg_address4",
+            "in": "body",
+            "required": true,
+            "description": "Company registration address 4",
+            "type": "string"
+          },
+          {
+            "name": "reg_address_postcode",
+            "in": "body",
+            "required": true,
+            "description": "Company registration address postcode",
+            "type": "string"
+          },
+          {
+            "name": "pension_regulator_letter_code",
+            "in": "body",
+            "required": true,
+            "description": "Company pension regulator letter code",
+            "type": "string"
+          },
+          {
+            "name": "staging_on",
+            "in": "body",
+            "required": true,
+            "description": "Company staging date",
+            "type": "string"
+          },
+          {
+            "name": "automatic_postponement_period",
+            "in": "body",
+            "required": true,
+            "description": "Period for automatic postponements",
+            "type": "string"
+          },
+          {
+            "name": "tax_office_employer_reference",
+            "in": "body",
+            "required": true,
+            "description": "Company PAYE reference second part",
+            "type": "string"
+          },
+          {
+            "name": "tax_office_number",
+            "in": "body",
+            "required": true,
+            "description": "Company PAYE reference first part",
+            "type": "string"
+          },
+          {
+            "name": "trading_address1",
+            "in": "body",
+            "required": true,
+            "description": "Company trading address 1",
+            "type": "string"
+          },
+          {
+            "name": "trading_address2",
+            "in": "body",
+            "required": true,
+            "description": "Company trading address 2",
+            "type": "string"
+          },
+          {
+            "name": "trading_address3",
+            "in": "body",
+            "required": true,
+            "description": "Company trading address 3",
+            "type": "string"
+          },
+          {
+            "name": "trading_address_postcode",
+            "in": "body",
+            "required": true,
+            "description": "Company trading address postcode",
+            "type": "string"
+          },
+          {
+            "name": "pensionable_earning_type",
+            "in": "body",
+            "required": true,
+            "description": "Pensionable Earning Type",
+            "type": "string"
+          },
+          {
+            "name": "default_percentage",
+            "in": "body",
+            "required": true,
+            "description": "Company default percentage",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "in": "body",
+            "required": true,
+            "description": "Signatory email",
+            "type": "string"
+          },
+          {
+            "name": "forename",
+            "in": "body",
+            "required": true,
+            "description": "Signatory forename",
+            "type": "string"
+          },
+          {
+            "name": "surname",
+            "in": "body",
+            "required": true,
+            "description": "Signatory surname",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "body",
+            "required": true,
+            "description": "Signatory title",
+            "type": "string"
+          },
+          {
+            "name": "telephone",
+            "in": "body",
+            "required": true,
+            "description": "Signatory telephone number",
+            "type": "string"
+          },
+          {
+            "name": "duedil_id",
+            "in": "body",
+            "required": true,
+            "description": "Signatory duedil id",
+            "type": "string"
+          },
+          {
+            "name": "duedil_address",
+            "in": "body",
+            "required": true,
+            "description": "Signatory duedil address",
+            "type": "string"
+          },
+          {
+            "name": "date_of_birth",
+            "in": "body",
+            "required": true,
+            "description": "Signatory date of birth",
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "body",
+            "required": true,
+            "description": "Signatory password",
+            "type": "string"
+          },
+          {
+            "name": "external_id",
+            "in": "body",
+            "required": true,
+            "description": "Signatory external id",
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "default": "api.example.com",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "default": "application/vnd.autoenrolment.v5+json",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Error",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "404": {
+            "description": "Resource not found",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "examples": {
+              "application/json": "{\n  \"id\": 17,\n  \"name\": \"name\",\n  \"slug\": \"name\",\n  \"registration_number\": \"123\",\n  \"staging_on\": null,\n  \"tax_office_number\": null,\n  \"tax_office_employer_reference\": null,\n  \"contact_id\": 17,\n  \"contact_type\": \"Customer\",\n  \"legal_structure\": \"Limited Company\",\n  \"welcome_letters_reminder_sent_at\": null,\n  \"pension_regulator_letter_code\": null,\n  \"trading_address1\": null,\n  \"trading_address2\": null,\n  \"trading_address3\": null,\n  \"trading_address_postcode\": null,\n  \"reg_address1\": null,\n  \"reg_address2\": null,\n  \"reg_address3\": null,\n  \"reg_address4\": null,\n  \"reg_address_postcode\": null,\n  \"pensionable_earning_type\": \"unbanded\",\n  \"automatic_postponement_period\": null,\n  \"default_percentage\": 1.0,\n  \"employer_pension_scheme_registration\": \"SMART10000017\",\n  \"created_at\": \"2017-05-26T14:23:15.000+01:00\",\n  \"updated_at\": \"2017-05-26T14:23:15.000+01:00\",\n  \"state\": \"active\",\n  \"signatories\": [\n    {\n      \"id\": 17,\n      \"email\": \"john@doe.fr\",\n      \"reset_password_token\": null,\n      \"reset_password_sent_at\": null,\n      \"remember_created_at\": null,\n      \"last_sign_in_at\": null,\n      \"slug\": \"fsurname\",\n      \"created_at\": \"2017-05-26T14:23:15.000+01:00\",\n      \"updated_at\": \"2017-05-26T14:23:15.000+01:00\",\n      \"gauth_secret\": \"7mi43pdewhjpsjlhiusp5krfojwz4xhyrh2h5fdhoz24eqhcwwbac3gtwrq5hb5p\",\n      \"gauth_enabled\": false,\n      \"gauth_tmp\": null,\n      \"forename\": \"forename\",\n      \"surname\": \"surname\",\n      \"title\": null,\n      \"authentication_token\": \"BSEtqjWF4is4_JYURAN5\",\n      \"duedil_id\": null,\n      \"date_of_birth\": null,\n      \"duedil_address\": null,\n      \"line2\": null,\n      \"city\": null,\n      \"county\": null,\n      \"building_name\": null,\n      \"postcode\": null,\n      \"line1\": null,\n      \"building_number\": null,\n      \"telephone\": null,\n      \"referee_id\": null,\n      \"referee_type\": null,\n      \"referral_state\": \"ignition\",\n      \"referral_clicks\": 0,\n      \"referral_reward_name\": null,\n      \"authentication_token_generated_at\": \"2017-05-26T14:23:15.000+01:00\",\n      \"male\": true,\n      \"role\": \"signatory\",\n      \"middlename\": null,\n      \"envelope_state\": \"ignition\",\n      \"enforce_password\": false,\n      \"company_id\": 17,\n      \"api_key\": \"O0eohopi0IwXq2ixMXLixw\",\n      \"links\": [\n\n      ]\n    }\n  ],\n  \"admins\": [\n\n  ]\n}"
+            }
+          },
+          "422": {
+            "description": "Unprocessable",
+            "examples": {
+              "application/json": "{\n  \"errors\": [\n    {\n      \"code\": 703,\n      \"title\": \"Company registration number is a required field.\",\n      \"detail\": \"You need to enter the company registration number. If the business is not registered with Companies House please use another unique number to identify this business. For example, HMRC registration number, business telephone number or charity number.\",\n      \"source\": {\n        \"pointer\": \"/data/attributes/registration_number\"\n      }\n    },\n    {\n      \"code\": 1606,\n      \"title\": \"Email address is a required field.\",\n      \"detail\": \"You need to include an email address for this signatory.\",\n      \"source\": {\n        \"pointer\": \"/data/relationships/signatories/0/attributes/email\"\n      }\n    },\n    {\n      \"code\": 1606,\n      \"title\": \"Email address is a required field.\",\n      \"detail\": \"You need to include an email address for this signatory.\",\n      \"source\": {\n        \"pointer\": \"/data/relationships/signatories/0/attributes/email\"\n      }\n    },\n    {\n      \"code\": 1601,\n      \"title\": \"Forename is a required field.\",\n      \"detail\": \"You need to include a forename for this signatory.\",\n      \"source\": {\n        \"pointer\": \"/data/relationships/signatories/0/attributes/forename\"\n      }\n    },\n    {\n      \"code\": 1603,\n      \"title\": \"Surname is a required field.\",\n      \"detail\": \"You need to include a surname for this signatory.\",\n      \"source\": {\n        \"pointer\": \"/data/relationships/signatories/0/attributes/surname\"\n      }\n    }\n  ]\n}"
+            }
+          }
+        }
+      }
+    },
     "/batch": {
       "post": {
         "summary": "Batch",
@@ -30,23 +308,99 @@
         "parameters": [
           {
             "name": "path",
-            "in": "query",
+            "in": "body",
             "required": true,
             "description": "Operation path",
             "type": "string"
           },
           {
             "name": "http_method",
-            "in": "query",
+            "in": "body",
             "required": true,
             "description": "Operation HTTP method",
             "type": "string"
           },
           {
             "name": "data",
-            "in": "query",
+            "in": "body",
             "required": true,
             "description": "Operation HTTP body",
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "default": "api.example.com",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "default": "application/vnd.autoenrolment.v5+json",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Error",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "404": {
+            "description": "Resource not found",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "413": {
+            "description": "Request entity too large",
+            "examples": {
+              "application/json": "{\n  \"errors\": [\n    {\n      \"code\": 413,\n      \"title\": \"Too many requests.\",\n      \"detail\": \"The request is larger than the server is willing or able to process. Please, retry with a smaller request.\",\n      \"source\": {\n        \"pointer\": \"/base\"\n      }\n    }\n  ]\n}"
+            }
+          },
+          "200": {
+            "description": "OK",
+            "examples": {
+              "application/json": "{\n  \"operations\": [\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"499\",\n        \"ETag\": \"W/\\\"a829518155bc78abf3f5266c84a503b1\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"47ebe518-4357-4925-8d66-5ebd33cf6715\",\n        \"X-Runtime\": \"0.048757\"\n      },\n      \"body\": {\n        \"id\": 19,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 19,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000019\",\n        \"created_at\": \"2017-05-26T14:23:15.000+01:00\",\n        \"updated_at\": \"2017-05-26T14:23:15.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/19\"\n    },\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"498\",\n        \"ETag\": \"W/\\\"a829518155bc78abf3f5266c84a503b1\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"17008790-c6e8-4176-8fec-da8862db43dd\",\n        \"X-Runtime\": \"0.030247\"\n      },\n      \"body\": {\n        \"id\": 19,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 19,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000019\",\n        \"created_at\": \"2017-05-26T14:23:15.000+01:00\",\n        \"updated_at\": \"2017-05-26T14:23:15.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/19\"\n    }\n  ]\n}"
+            }
+          }
+        }
+      }
+    },
+    "/customers/verify_credentials": {
+      "get": {
+        "summary": "Customers/VerifyCredentials",
+        "tags": [
+          "Customers"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "login",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "query",
             "type": "string"
           },
           {
@@ -90,13 +444,7 @@
           "200": {
             "description": "OK",
             "examples": {
-              "application/json": "{\n  \"operations\": [\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"499\",\n        \"ETag\": \"W/\\\"bd4d6cb7b87a4151dbc1341dde23a31d\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"ff8d163e-95d8-4568-8630-5d9228331ac0\",\n        \"X-Runtime\": \"0.200185\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"updated_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    },\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"498\",\n        \"ETag\": \"W/\\\"bd4d6cb7b87a4151dbc1341dde23a31d\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"0b28e0c3-0358-40c1-897a-dede0cea575f\",\n        \"X-Runtime\": \"0.036444\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"updated_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    }\n  ]\n}"
-            }
-          },
-          "413": {
-            "description": "Request entity too large",
-            "examples": {
-              "application/json": "{\n  \"errors\": [\n    {\n      \"code\": 413,\n      \"title\": \"Too many requests.\",\n      \"detail\": \"The request is larger than the server is willing or able to process. Please, retry with a smaller request.\",\n      \"source\": {\n        \"pointer\": \"/base\"\n      }\n    }\n  ]\n}"
+              "application/json": "{\n  \"id\": 21,\n  \"api_key\": \"mh30LtUv2ed_oOZKvx-l0w\"\n}"
             }
           }
         }
