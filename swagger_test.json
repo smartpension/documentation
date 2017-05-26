@@ -29,6 +29,19 @@
         "description": "",
         "parameters": [
           {
+            "name": "action",
+            "in": "body",
+            "description": "Company registration number ",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "follow",
+                "unfollow",
+                "block"
+                ]              
+            }
+          },
+          {
             "name": "registration_number",
             "in": "body",
             "required": true,
