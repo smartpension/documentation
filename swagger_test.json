@@ -46,21 +46,21 @@
           },
           {
             "name": "path",
-            "in": "body",
+            "in": "query",
             "required": true,
             "description": "Operation path",
             "type": "string"
           },
           {
             "name": "http_method",
-            "in": "body",
+            "in": "query",
             "required": true,
             "description": "Operation HTTP method",
             "type": "string"
           },
           {
             "name": "data",
-            "in": "body",
+            "in": "query",
             "required": true,
             "description": "Operation HTTP body",
             "type": "string"
