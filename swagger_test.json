@@ -1,0 +1,106 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "Current",
+    "title": "Smart Pension API",
+    "description": "This is the endpoint description of Smart Pension API."
+  },
+  "host": "api.sandbox.autoenrolment.co.uk",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "paths": {
+    "/batch": {
+      "post": {
+        "summary": "Batch",
+        "tags": [
+          ""
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": true,
+            "description": "Operation path",
+            "type": "string"
+          },
+          {
+            "name": "http_method",
+            "in": "query",
+            "required": true,
+            "description": "Operation HTTP method",
+            "type": "string"
+          },
+          {
+            "name": "data",
+            "in": "query",
+            "required": true,
+            "description": "Operation HTTP body",
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "default": "api.example.com",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "default": "application/vnd.autoenrolment.v5+json",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Error",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "404": {
+            "description": "Resource not found",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "examples": {
+              "application/json": "{}"
+            }
+          },
+          "200": {
+            "description": "OK",
+            "examples": {
+              "application/json": "{\n  \"operations\": [\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"499\",\n        \"ETag\": \"W/\\\"bd4d6cb7b87a4151dbc1341dde23a31d\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"ff8d163e-95d8-4568-8630-5d9228331ac0\",\n        \"X-Runtime\": \"0.200185\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"updated_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    },\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"498\",\n        \"ETag\": \"W/\\\"bd4d6cb7b87a4151dbc1341dde23a31d\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"0b28e0c3-0358-40c1-897a-dede0cea575f\",\n        \"X-Runtime\": \"0.036444\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"updated_at\": \"2017-05-26T12:00:30.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    }\n  ]\n}"
+            }
+          },
+          "413": {
+            "description": "Request entity too large",
+            "examples": {
+              "application/json": "{\n  \"errors\": [\n    {\n      \"code\": 413,\n      \"title\": \"Too many requests.\",\n      \"detail\": \"The request is larger than the server is willing or able to process. Please, retry with a smaller request.\",\n      \"source\": {\n        \"pointer\": \"/base\"\n      }\n    }\n  ]\n}"
+            }
+          }
+        }
+      }
+    }
+  }
+}
