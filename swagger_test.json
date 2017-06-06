@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "Current",
     "title": "Smart Pension API",
+    "version": "v5",
     "description": "This is the endpoint description of Smart Pension API."
   },
   "host": "api.sandbox.autoenrolment.co.uk",
@@ -15,78 +15,518 @@
   "x-samples-languages": [
     "curl"
   ],
-  "securityDefinitions": {
-    "key": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "Authorization"
-    }
-  },
   "paths": {
     "/batch": {
       "post": {
         "summary": "Batch",
         "tags": [
-          ""
+          "Batch"
         ],
-        "description": "",
         "parameters": [
           {
             "name": "operations",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/_batch"
+              "$ref": "#/definitions/operations"
             }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
           },
           {
             "name": "Host",
             "in": "header",
-            "default": "api.example.com",
             "type": "string"
           },
           {
             "name": "Accept",
             "in": "header",
-            "default": "application/vnd.autoenrolment.v5+json",
             "type": "string"
           }
         ],
         "responses": {
-          "400": {
-            "description": "Error",
-            "examples": {
-              "application/json": "{}"
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "examples": {
-              "application/json": "{}"
-            }
-          },
-          "404": {
-            "description": "Resource not found",
-            "examples": {
-              "application/json": "{}"
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "examples": {
-              "application/json": "{}"
-            }
-          },
           "200": {
-            "description": "OK",
+            "description": "Success",
             "examples": {
-              "application/json": "{\n  \"operations\": [\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"499\",\n        \"ETag\": \"W/\\\"ceb0d7c99e7e882d30b3d665dd1dc65b\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"cfcd2b1c-5db7-4623-a66d-b8ea06aefc1e\",\n        \"X-Runtime\": \"0.195514\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T16:17:03.000+01:00\",\n        \"updated_at\": \"2017-05-26T16:17:04.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    },\n    {\n      \"status\": 200,\n      \"headers\": {\n        \"X-Frame-Options\": \"SAMEORIGIN\",\n        \"X-XSS-Protection\": \"1; mode=block\",\n        \"X-Content-Type-Options\": \"nosniff\",\n        \"Content-Type\": \"application/json; charset=utf-8\",\n        \"X-RateLimit-Limit\": \"500\",\n        \"X-RateLimit-Remaining\": \"498\",\n        \"ETag\": \"W/\\\"ceb0d7c99e7e882d30b3d665dd1dc65b\\\"\",\n        \"Cache-Control\": \"max-age=0, private, must-revalidate\",\n        \"X-Request-Id\": \"4e999054-6e7b-470c-91b3-c6c3f01feb29\",\n        \"X-Runtime\": \"0.031476\"\n      },\n      \"body\": {\n        \"id\": 17,\n        \"name\": \"name\",\n        \"slug\": \"name\",\n        \"registration_number\": \"number\",\n        \"staging_on\": \"2017-05-01\",\n        \"tax_office_number\": null,\n        \"tax_office_employer_reference\": null,\n        \"contact_id\": 17,\n        \"contact_type\": \"Customer\",\n        \"legal_structure\": \"Limited Company\",\n        \"welcome_letters_reminder_sent_at\": null,\n        \"pension_regulator_letter_code\": null,\n        \"trading_address1\": null,\n        \"trading_address2\": null,\n        \"trading_address3\": null,\n        \"trading_address_postcode\": null,\n        \"reg_address1\": null,\n        \"reg_address2\": null,\n        \"reg_address3\": null,\n        \"reg_address4\": null,\n        \"reg_address_postcode\": null,\n        \"pensionable_earning_type\": \"unbanded\",\n        \"automatic_postponement_period\": null,\n        \"default_percentage\": 1.0,\n        \"employer_pension_scheme_registration\": \"SMART10000017\",\n        \"created_at\": \"2017-05-26T16:17:03.000+01:00\",\n        \"updated_at\": \"2017-05-26T16:17:04.000+01:00\",\n        \"state\": \"active\"\n      },\n      \"path\": \"companies/17\"\n    }\n  ]\n}"
+              "application/json": {
+                "operations": [
+                  {
+                    "status": 200,
+                    "headers": {
+                      "X-Frame-Options": "SAMEORIGIN",
+                      "X-XSS-Protection": "1; mode=block",
+                      "X-Content-Type-Options": "nosniff",
+                      "Content-Type": "application/json; charset=utf-8",
+                      "X-RateLimit-Limit": "500",
+                      "X-RateLimit-Remaining": "499",
+                      "ETag": "W/\"b25b3a117f9d8d4a668737cfbb0cb2cd\"",
+                      "Cache-Control": "max-age=0, private, must-revalidate",
+                      "X-Request-Id": "16dcfae2-a70b-46ba-84a2-1101251c4859",
+                      "X-Runtime": "0.183222"
+                    },
+                    "body": {
+                      "id": 17,
+                      "name": "name",
+                      "slug": "name",
+                      "registration_number": "number",
+                      "staging_on": "2017-06-01",
+                      "tax_office_number": null,
+                      "tax_office_employer_reference": null,
+                      "contact_id": 17,
+                      "contact_type": "Customer",
+                      "legal_structure": "Limited Company",
+                      "welcome_letters_reminder_sent_at": null,
+                      "pension_regulator_letter_code": null,
+                      "trading_address1": null,
+                      "trading_address2": null,
+                      "trading_address3": null,
+                      "trading_address_postcode": null,
+                      "reg_address1": null,
+                      "reg_address2": null,
+                      "reg_address3": null,
+                      "reg_address4": null,
+                      "reg_address_postcode": null,
+                      "pensionable_earning_type": "unbanded",
+                      "automatic_postponement_period": null,
+                      "default_percentage": 1.0,
+                      "employer_pension_scheme_registration": "SMART10000017",
+                      "created_at": "2017-06-06T11:01:53.000+01:00",
+                      "updated_at": "2017-06-06T11:01:53.000+01:00",
+                      "state": "active"
+                    },
+                    "path": "companies/17"
+                  },
+                  {
+                    "status": 200,
+                    "headers": {
+                      "X-Frame-Options": "SAMEORIGIN",
+                      "X-XSS-Protection": "1; mode=block",
+                      "X-Content-Type-Options": "nosniff",
+                      "Content-Type": "application/json; charset=utf-8",
+                      "X-RateLimit-Limit": "500",
+                      "X-RateLimit-Remaining": "498",
+                      "ETag": "W/\"b25b3a117f9d8d4a668737cfbb0cb2cd\"",
+                      "Cache-Control": "max-age=0, private, must-revalidate",
+                      "X-Request-Id": "a798079a-358c-463a-853a-844f37a264be",
+                      "X-Runtime": "0.034791"
+                    },
+                    "body": {
+                      "id": 17,
+                      "name": "name",
+                      "slug": "name",
+                      "registration_number": "number",
+                      "staging_on": "2017-06-01",
+                      "tax_office_number": null,
+                      "tax_office_employer_reference": null,
+                      "contact_id": 17,
+                      "contact_type": "Customer",
+                      "legal_structure": "Limited Company",
+                      "welcome_letters_reminder_sent_at": null,
+                      "pension_regulator_letter_code": null,
+                      "trading_address1": null,
+                      "trading_address2": null,
+                      "trading_address3": null,
+                      "trading_address_postcode": null,
+                      "reg_address1": null,
+                      "reg_address2": null,
+                      "reg_address3": null,
+                      "reg_address4": null,
+                      "reg_address_postcode": null,
+                      "pensionable_earning_type": "unbanded",
+                      "automatic_postponement_period": null,
+                      "default_percentage": 1.0,
+                      "employer_pension_scheme_registration": "SMART10000017",
+                      "created_at": "2017-06-06T11:01:53.000+01:00",
+                      "updated_at": "2017-06-06T11:01:53.000+01:00",
+                      "state": "active"
+                    },
+                    "path": "companies/17"
+                  }
+                ]
+              }
             }
           },
           "413": {
-            "description": "Request entity too large",
+            "description": "Too many requests.",
             "examples": {
-              "application/json": "{\n  \"errors\": [\n    {\n      \"code\": 413,\n      \"title\": \"Too many requests.\",\n      \"detail\": \"The request is larger than the server is willing or able to process. Please, retry with a smaller request.\",\n      \"source\": {\n        \"pointer\": \"/base\"\n      }\n    }\n  ]\n}"
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 413,
+                    "title": "Too many requests.",
+                    "detail": "The request is larger than the server is willing or able to process. Please, retry with a smaller request.",
+                    "source": {
+                      "pointer": "/base"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies/{company_id}/employees/{employee_id}/contributions": {
+      "post": {
+        "summary": "Contribution/Create",
+        "tags": [
+          "Contribution"
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "employee_id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "contribution",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/contribution"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Creates a contribution with pensionable earnings",
+            "examples": {
+              "application/json": {
+                "id": 3,
+                "category": "Eligible jobholders",
+                "employee_id": 8,
+                "period_type": "Weekly",
+                "gross_qualifying_earnings": null,
+                "pensionable_earnings": 1000.0,
+                "company_percentage": 1.0,
+                "employee_percentage": 1.0,
+                "state": "ignition",
+                "created_at": "2017-06-06T11:01:55.000+01:00",
+                "updated_at": "2017-06-06T11:01:55.000+01:00",
+                "contribute_if_entitled": true,
+                "bill_id": null,
+                "company_amount": 1.0,
+                "employee_amount": 1.0,
+                "voluntary_amount": 0.0,
+                "works_in_uk": true,
+                "starts_on": "2017-06-06",
+                "ends_on": "2017-06-12",
+                "lower_level": 113.0,
+                "upper_level": 866.0,
+                "trigger_level": 192.0,
+                "pensionable_earning_type": "unbanded",
+                "links": [
+                  {
+                    "rel": "employee",
+                    "title": "employee",
+                    "href": "http://api.co.uk:3000/companies/20/employees/8"
+                  }
+                ]
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid parameters",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 311,
+                    "title": "Period type is a required field.",
+                    "detail": "You need to enter a pay period type.",
+                    "source": {
+                      "pointer": "/data/attributes/period_type"
+                    }
+                  },
+                  {
+                    "code": 311,
+                    "title": "Period type is a required field.",
+                    "detail": "You need to enter a pay period type.",
+                    "source": {
+                      "pointer": "/data/attributes/period_type"
+                    }
+                  },
+                  {
+                    "code": 313,
+                    "title": "Pay period start date is a required field.",
+                    "detail": "You need to enter a pay period start date.",
+                    "source": {
+                      "pointer": "/data/attributes/starts_on"
+                    }
+                  },
+                  {
+                    "code": 319,
+                    "title": "Pay period end date is a required field.",
+                    "detail": "You need to enter a pay period end date.",
+                    "source": {
+                      "pointer": "/data/attributes/ends_on"
+                    }
+                  },
+                  {
+                    "code": 307,
+                    "title": "Gross qualifying earnings is a required field.",
+                    "detail": "You need to enter a gross qualifying earnings.",
+                    "source": {
+                      "pointer": "/data/attributes/gross_qualifying_earnings"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies/{company_id}/employees": {
+      "post": {
+        "summary": "Employees/Create",
+        "tags": [
+          "Employee"
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "employee",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/employee"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 10,
+                "email": null,
+                "reset_password_token": null,
+                "reset_password_sent_at": null,
+                "remember_created_at": null,
+                "last_sign_in_at": null,
+                "slug": "fsurname7",
+                "created_at": "2017-06-06T11:01:56.000+01:00",
+                "updated_at": "2017-06-06T11:01:56.000+01:00",
+                "confirmation_token": null,
+                "gauth_secret": "7mbasxv3nelig53xx3cyerfv5lu6glkjpcymqffampq2thoyahgpghiaxtqkw7lz",
+                "gauth_enabled": false,
+                "gauth_tmp": null,
+                "forename": "forename",
+                "surname": "surname",
+                "title": null,
+                "authentication_token": "MRCyVkBamgFqL5S5Jgor",
+                "date_of_birth": "2017-06-05",
+                "group_id": null,
+                "line2": null,
+                "city": null,
+                "county": null,
+                "postcode": "w6 4ra",
+                "line1": null,
+                "telephone": null,
+                "national_insurance_number": null,
+                "works_in_uk": true,
+                "starts_on": "2016-01-01",
+                "authentication_token_generated_at": "2017-06-06T11:01:56.000+01:00",
+                "male": true,
+                "company_percentage": 1.0,
+                "company_percentage_matched": 1.0,
+                "company_match": false,
+                "percentage": 1.0,
+                "contribute_if_entitled": true,
+                "enforce_password": true,
+                "ends_on": null,
+                "exit_reason": null,
+                "opt_out_on": null,
+                "opt_state": "ignition",
+                "opt_in_on": null,
+                "opt_out_window_starts_on": null,
+                "company_id": 22,
+                "api_key": "gp_FNOitvizyuqdrnOR95Q",
+                "automatically_enrolled": false,
+                "external_id": null,
+                "fund_id": 1,
+                "customer_id": null,
+                "referral_clicks": 0,
+                "contribution_ids": [
+
+                ],
+                "links": [
+                  {
+                    "rel": "company",
+                    "title": "company",
+                    "href": "http://api.co.uk:3000/companies/22"
+                  }
+                ]
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid parameters",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 2522,
+                    "title": "Forename is a required field.",
+                    "detail": "You need to include the forename.",
+                    "source": {
+                      "pointer": "/data/attributes/forename"
+                    }
+                  },
+                  {
+                    "code": 2524,
+                    "title": "Surname is a required field.",
+                    "detail": "You need to include the surname.",
+                    "source": {
+                      "pointer": "/data/attributes/surname"
+                    }
+                  },
+                  {
+                    "code": 2526,
+                    "title": "Postcode is a required field.",
+                    "detail": "You need to include the postcode.",
+                    "source": {
+                      "pointer": "/data/attributes/postcode"
+                    }
+                  },
+                  {
+                    "code": 2504,
+                    "title": "Date of birth is a required field.",
+                    "detail": "You need to enter the date of birth.",
+                    "source": {
+                      "pointer": "/data/attributes/date_of_birth"
+                    }
+                  },
+                  {
+                    "code": 2527,
+                    "title": "Employment start date is a required field.",
+                    "detail": "You need to include the employment start date.",
+                    "source": {
+                      "pointer": "/data/attributes/starts_on"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies/{company_id}/employees/{id}": {
+      "patch": {
+        "summary": "Employees/Update",
+        "tags": [
+          "Employee"
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "employee",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/employee"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Updates an employee. Only the field submited in the request are used.",
+            "examples": {
+              "application/json": ""
+            }
+          },
+          "422": {
+            "description": "Invalid parameters",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 2522,
+                    "title": "Forename is a required field.",
+                    "detail": "You need to include the forename.",
+                    "source": {
+                      "pointer": "/data/attributes/forename"
+                    }
+                  }
+                ]
+              }
             }
           }
         }
@@ -94,19 +534,252 @@
     }
   },
   "definitions": {
-    "_batch": {
+    "operations": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "An endpoint path you want to submit the request to."
+          },
+          "http_method": {
+            "type": "string",
+            "description": "The HTTP method you want to use. Allowed methods: GET, PATCH, POST, DELETE."
+          },
+          "data": {
+            "type": "string",
+            "description": "The json body of the request. Must be provided if the `http_method` is PATCH or POST."
+          }
+        },
+        "required": [
+          "path",
+          "http_method"
+        ]
+      }
+    },
+    "employee": {
       "type": "object",
       "properties": {
-        "path": {
-          "type": "string"
+        "title": {
+          "type": "string",
+          "description": "The employee title.",
+          "enum": [
+            "Mr",
+            "Mrs",
+            "Ms",
+            "Miss",
+            "Dr"
+          ]
         },
-        "http_method": {
-          "type": "string"
+        "forename": {
+          "type": "string",
+          "description": "The employee forename."
         },
-        "data": {
-          "type": "string"
+        "surname": {
+          "type": "string",
+          "description": "The employee surname."
+        },
+        "male": {
+          "type": "boolean",
+          "description": "The employee gender: true (male), false (female)."
+        },
+        "email": {
+          "type": "string",
+          "description": "The employee email address."
+        },
+        "telephone": {
+          "type": "string",
+          "description": "The employee telephone number."
+        },
+        "line1": {
+          "type": "string",
+          "description": "Employee address line 1."
+        },
+        "line2": {
+          "type": "string",
+          "description": "Employee address line 2."
+        },
+        "city": {
+          "type": "string",
+          "description": "The employee city."
+        },
+        "county": {
+          "type": "string",
+          "description": "The employee county."
+        },
+        "postcode": {
+          "type": "string",
+          "description": "The employee postcode."
+        },
+        "date_of_birth": {
+          "type": "string",
+          "format": "date",
+          "description": "The employee date of birth."
+        },
+        "national_insurance_number": {
+          "type": "string",
+          "pattern": "\\A([ACEHJLMOPRSWXY][A-CEGHJ-NPR-TW-Z]|B[A-CEHJ-NPR-TW-Z]|G[ACEGHJ-NPR-TW-Z]|[KT][A-CEGHJ-MPR-TW-Z]|N[A-CEGHJL-NPR-SW-Z]|Z[A-CEGHJ-NPR-TW-Y])[0-9]{6}[A-D]?",
+          "description": "The employee national insurance number."
+        },
+        "starts_on": {
+          "type": "string",
+          "format": "date",
+          "description": "The employee start date."
+        },
+        "opt_state": {
+          "type": "string",
+          "description": "**Available for PATCH requests only**. The opt_state describes whether the employee is an active member of the scheme. All available transitions between `opt_states` are described in the [Opt state transition flow documentation](http://developers.autoenrolment.co.uk/docs/opt-state-transitions).",
+          "default": "ignition",
+          "enum": [
+            "ignition",
+            "opted_in",
+            "opted_out",
+            "rejoined",
+            "ceased_membership"
+          ]
+        },
+        "opt_out_window_starts_on": {
+          "type": "string",
+          "format": "date",
+          "description": "The start of opt out period of the employee. The opt out window length is 1 calendar month (e.g. 6th May to 5th June). The `opt_out_window_starts_on` is ignored if the employee `opt_state` is not `opted_in` or `rejoined`."
+        },
+        "ends_on": {
+          "type": "string",
+          "format": "date",
+          "description": "The employee end employment date or date of death. It is recommended to used when the employee left the employment or passed away only. In order to *cease membership*, update the `opt_state`."
+        },
+        "exit_reason": {
+          "type": "string",
+          "description": "The employee exit reason. Required if `ends_on` is provided. Rather than using the **\"Ceased active membership, employee still employed\"** option, update the `opt_state` to *ceased_membership*.",
+          "enum": [
+            "Employee left employment",
+            "Ceased active membership, employee still employed",
+            "Death"
+          ]
+        },
+        "percentage": {
+          "type": "number",
+          "format": "float",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The employee contribution percentage."
+        },
+        "company_percentage": {
+          "type": "number",
+          "format": "float",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The company contribution percentage for the employee."
+        },
+        "company_match": {
+          "type": "boolean",
+          "description": "Define if the company percentage will match the employee percentage when `percentage` is less than `company_percentage`. e.g. `percentage` is 3% and `company_percentage` is 5%: if `company_match` is true, all contributions created for the employee will have employee `percentage` and `company_percentage` set to 3%, otherwise the provided percentages will be applied.",
+          "default": false
+        },
+        "group_id": {
+          "type": "integer",
+          "description": "The id of the group the employee belongs to."
+        },
+        "works_in_uk": {
+          "type": "boolean",
+          "description": "Defines if the employee works in the UK. If `false`, the employer has no duties against the employee.",
+          "default": true
+        },
+        "contribute_if_entitled": {
+          "type": "boolean",
+          "description": "Defines if the employer will contribute if the employee category is Entitled worker.",
+          "default": true
+        },
+        "customer_id": {
+          "type": "integer",
+          "description": "The id of the customer account the employee is linked to. It will allow the employee to switch between the two accounts on the Smart Pension website."
+        },
+        "external_id": {
+          "type": "string",
+          "description": "A reference to link the employee to an external system such as a payroll software. It must be provided if the company wants to upload contributions via Papdis. Please note: avoid using values with leading zeros e.g. 0000123. All leading zeros will be removed by our system while uploding a Papdis file or a sreadsheet."
+        },
+        "fund_id": {
+          "type": "string",
+          "description": "The id of fund the employee has chosen to invest contributions to. Please note: the default value is based on `date_of_birth`, but can be overridden."
         }
-      }
+      },
+      "required": [
+        "forename",
+        "surname",
+        "date_of_birth",
+        "starts_on",
+        "postcode"
+      ]
+    },
+    "contribution": {
+      "type": "object",
+      "properties": {
+        "gross_qualifying_earnings": {
+          "type": "number",
+          "format": "float",
+          "description": "The gross qualifying earnings of the employee. It is **required** if you want Smart Pension to define the employee category. Format: float with two decimals."
+        },
+        "period_type": {
+          "type": "string",
+          "description": "The length of the pay reference period.",
+          "enum": [
+            "Weekly",
+            "Fortnightly",
+            "FourWeekly",
+            "Monthly",
+            "Quarterly",
+            "BiAnnually",
+            "Annually"
+          ]
+        },
+        "starts_on": {
+          "type": "string",
+          "format": "date",
+          "description": "The start of the pay reference period."
+        },
+        "ends_on": {
+          "type": "string",
+          "format": "date",
+          "description": "The end of the pay reference period."
+        },
+        "category": {
+          "type": "string",
+          "description": "*Amendments to this value via a PATCH requests are ignored*. The worker category during the pay reference period. It is **required** only if `gross_qualifying_earnings` is not provided. The \"No Duties\" category is used to identify exempted employees",
+          "enum": [
+            "No duties",
+            "Entitled workers",
+            "Non-eligible jobholders",
+            "Eligible jobholders"
+          ]
+        },
+        "pensionable_earnings": {
+          "type": "number",
+          "format": "float",
+          "description": "*Amendments to this value via a PATCH requests are ignored*. The pensionable earnings of the employee. It is **required** only if `gross_qualifying_earnings` is not provided. Format: float with two decimals."
+        },
+        "employee_amount": {
+          "type": "number",
+          "format": "float",
+          "description": "*Amendments to this value via a PATCH requests are ignored*. The employee contribution amount for the pay reference period. It is **required** only if `gross_qualifying_earnings` is not provided. Format: float with two decimals."
+        },
+        "company_amount": {
+          "type": "number",
+          "format": "float",
+          "description": "*Amendments to this value via a PATCH requests are ignored*. The company contribution amount for the pay reference period. It is **required** only if `gross_qualifying_earnings` is not provided. Format: float with two decimals."
+        },
+        "voluntary_amount": {
+          "type": "number",
+          "format": "float",
+          "description": "*Amendments to this value via a PATCH requests are ignored*. The additional voluntary contribution (AVC) amount for the pay reference period. Format: float with two decimals."
+        }
+      },
+      "required": [
+        "period_type",
+        "starts_on",
+        "ends_on"
+      ]
     }
   }
 }
