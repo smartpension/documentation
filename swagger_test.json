@@ -16,6 +16,263 @@
     "curl"
   ],
   "paths": {
+    "/advisers": {
+      "post": {
+        "summary": "Advisers/Create",
+        "tags": [
+          "Adviser"
+        ],
+        "parameters": [
+          {
+            "name": "adviser",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/adviser"
+            }
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 5,
+                "name": "name",
+                "type": "Adviser",
+                "address": "address",
+                "created_at": "2017-06-26T16:58:16.000+01:00",
+                "updated_at": "2017-06-26T16:58:16.000+01:00",
+                "signup_start": "signup_start_text",
+                "signup_finish": "signup_finish_text",
+                "user_id": 2,
+                "title": "Mr",
+                "forename": "forename",
+                "surname": "surname",
+                "email": "name@email.com",
+                "telephone": "0123456789",
+                "api_key": "8YqyiSjy1WDWsLCP7vJt3Q"
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid parameters",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 204,
+                    "title": "Adviser name is required.",
+                    "detail": "You need to include a name for this adviser account; this is the name that clients of this adviser will see.",
+                    "source": {
+                      "pointer": "/data/attributes/name"
+                    }
+                  },
+                  {
+                    "code": 206,
+                    "title": "Adviser address is required.",
+                    "detail": "You need to include an address for this adviser account. This can be the registered address of the firm or the place that receives business related correspondence.",
+                    "source": {
+                      "pointer": "/data/attributes/address"
+                    }
+                  },
+                  {
+                    "code": 207,
+                    "title": "Email address is a required field.",
+                    "detail": "You need to enter an email address for this adviser.",
+                    "source": {
+                      "pointer": "/data/attributes/email"
+                    }
+                  },
+                  {
+                    "code": 208,
+                    "title": "Email address is not valid.",
+                    "detail": "The email address you entered is not valid. This may be because of the address format or the domain being unreachable. Make sure the address uses this format: name@something.com and that email is enabled for this domain.",
+                    "source": {
+                      "pointer": "/data/attributes/email"
+                    }
+                  },
+                  {
+                    "code": 201,
+                    "title": "Password is a required field.",
+                    "detail": "You need to enter a password for this adviser.",
+                    "source": {
+                      "pointer": "/data/attributes/password"
+                    }
+                  },
+                  {
+                    "code": 210,
+                    "title": "Forename is a required field.",
+                    "detail": "You need to include a forename for this adviser.",
+                    "source": {
+                      "pointer": "/data/attributes/forename"
+                    }
+                  },
+                  {
+                    "code": 211,
+                    "title": "Surname is a required field.",
+                    "detail": "You need to include a surname for this adviser.",
+                    "source": {
+                      "pointer": "/data/attributes/surname"
+                    }
+                  },
+                  {
+                    "code": 212,
+                    "title": "Telephone number is a required field.",
+                    "detail": "You need to include a telephone number for this adviser.",
+                    "source": {
+                      "pointer": "/data/attributes/telephone"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/advisers/{adviser_id}/users": {
+      "post": {
+        "summary": "Users/Create",
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "adviser_id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "user",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/user"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 4,
+                "email": "email@email.com",
+                "title": null,
+                "forename": "forename",
+                "surname": "surename",
+                "api_key": "NLL2redTBowAkHZSsJ4-HA",
+                "telephone": "0123456789",
+                "adviser_id": 6,
+                "created_at": "2017-06-26T16:58:16.000+01:00",
+                "updated_at": "2017-06-26T16:58:16.000+01:00",
+                "links": [
+                  {
+                    "rel": "adviser",
+                    "title": "adviser",
+                    "href": "http://api.co.uk:3000/advisers/6"
+                  }
+                ]
+              }
+            }
+          },
+          "422": {
+            "description": "Parameters invalid.",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 1804,
+                    "title": "Email address is a required field.",
+                    "detail": "You need to enter an email address for this user.",
+                    "source": {
+                      "pointer": "/data/attributes/email"
+                    }
+                  },
+                  {
+                    "code": 1801,
+                    "title": "Password is a required field.",
+                    "detail": "You need to enter a password for this user.",
+                    "source": {
+                      "pointer": "/data/attributes/password"
+                    }
+                  },
+                  {
+                    "code": 1806,
+                    "title": "Forename is a required field.",
+                    "detail": "You need to include the forename for this user.",
+                    "source": {
+                      "pointer": "/data/attributes/forename"
+                    }
+                  },
+                  {
+                    "code": 1807,
+                    "title": "Surname is a required field.",
+                    "detail": "You need to include the surname for this user.",
+                    "source": {
+                      "pointer": "/data/attributes/surname"
+                    }
+                  },
+                  {
+                    "code": 1808,
+                    "title": "Telephone number is a required field.",
+                    "detail": "You need to include a telephone number for this user.",
+                    "source": {
+                      "pointer": "/data/attributes/telephone"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - number of users exceeds allowed limit",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 35,
+                    "title": "Maximum number of create users reached!",
+                    "detail": "You cannot have more than 50 create users.",
+                    "source": {
+                      "pointer": "/base"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
     "/batch": {
       "post": {
         "summary": "Batch",
@@ -63,21 +320,19 @@
                       "Content-Type": "application/json; charset=utf-8",
                       "X-RateLimit-Limit": "500",
                       "X-RateLimit-Remaining": "499",
-                      "ETag": "W/\"b25b3a117f9d8d4a668737cfbb0cb2cd\"",
+                      "ETag": "W/\"5805fd0fe51111bd15a07ab5e8aa33e9\"",
                       "Cache-Control": "max-age=0, private, must-revalidate",
-                      "X-Request-Id": "16dcfae2-a70b-46ba-84a2-1101251c4859",
-                      "X-Runtime": "0.183222"
+                      "X-Request-Id": "ba7a7d81-f76c-4650-958d-889a5d397bb1",
+                      "X-Runtime": "0.064657"
                     },
                     "body": {
-                      "id": 17,
+                      "id": 19,
                       "name": "name",
                       "slug": "name",
                       "registration_number": "number",
                       "staging_on": "2017-06-01",
                       "tax_office_number": null,
                       "tax_office_employer_reference": null,
-                      "contact_id": 17,
-                      "contact_type": "Customer",
                       "legal_structure": "Limited Company",
                       "welcome_letters_reminder_sent_at": null,
                       "pension_regulator_letter_code": null,
@@ -93,12 +348,12 @@
                       "pensionable_earning_type": "unbanded",
                       "automatic_postponement_period": null,
                       "default_percentage": 1.0,
-                      "employer_pension_scheme_registration": "SMART10000017",
-                      "created_at": "2017-06-06T11:01:53.000+01:00",
-                      "updated_at": "2017-06-06T11:01:53.000+01:00",
+                      "employer_pension_scheme_registration": "SMART10000019",
+                      "created_at": "2017-06-26T16:58:20.000+01:00",
+                      "updated_at": "2017-06-26T16:58:20.000+01:00",
                       "state": "active"
                     },
-                    "path": "companies/17"
+                    "path": "companies/19"
                   },
                   {
                     "status": 200,
@@ -109,21 +364,19 @@
                       "Content-Type": "application/json; charset=utf-8",
                       "X-RateLimit-Limit": "500",
                       "X-RateLimit-Remaining": "498",
-                      "ETag": "W/\"b25b3a117f9d8d4a668737cfbb0cb2cd\"",
+                      "ETag": "W/\"5805fd0fe51111bd15a07ab5e8aa33e9\"",
                       "Cache-Control": "max-age=0, private, must-revalidate",
-                      "X-Request-Id": "a798079a-358c-463a-853a-844f37a264be",
-                      "X-Runtime": "0.034791"
+                      "X-Request-Id": "9b5320bb-1128-46ed-b394-8c4298dafdc6",
+                      "X-Runtime": "0.033829"
                     },
                     "body": {
-                      "id": 17,
+                      "id": 19,
                       "name": "name",
                       "slug": "name",
                       "registration_number": "number",
                       "staging_on": "2017-06-01",
                       "tax_office_number": null,
                       "tax_office_employer_reference": null,
-                      "contact_id": 17,
-                      "contact_type": "Customer",
                       "legal_structure": "Limited Company",
                       "welcome_letters_reminder_sent_at": null,
                       "pension_regulator_letter_code": null,
@@ -139,12 +392,12 @@
                       "pensionable_earning_type": "unbanded",
                       "automatic_postponement_period": null,
                       "default_percentage": 1.0,
-                      "employer_pension_scheme_registration": "SMART10000017",
-                      "created_at": "2017-06-06T11:01:53.000+01:00",
-                      "updated_at": "2017-06-06T11:01:53.000+01:00",
+                      "employer_pension_scheme_registration": "SMART10000019",
+                      "created_at": "2017-06-26T16:58:20.000+01:00",
+                      "updated_at": "2017-06-26T16:58:20.000+01:00",
                       "state": "active"
                     },
-                    "path": "companies/17"
+                    "path": "companies/19"
                   }
                 ]
               }
@@ -161,6 +414,478 @@
                     "detail": "The request is larger than the server is willing or able to process. Please, retry with a smaller request.",
                     "source": {
                       "pointer": "/base"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies": {
+      "post": {
+        "summary": "Companies/Create",
+        "tags": [
+          "Company"
+        ],
+        "parameters": [
+          {
+            "name": "company",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/company"
+            }
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success - automatic linking with an Adviser",
+            "examples": {
+              "application/json": {
+                "id": 22,
+                "name": "name",
+                "slug": "name",
+                "registration_number": "123",
+                "staging_on": null,
+                "tax_office_number": null,
+                "tax_office_employer_reference": null,
+                "legal_structure": "Limited Company",
+                "welcome_letters_reminder_sent_at": null,
+                "pension_regulator_letter_code": null,
+                "trading_address1": null,
+                "trading_address2": null,
+                "trading_address3": null,
+                "trading_address_postcode": null,
+                "reg_address1": null,
+                "reg_address2": null,
+                "reg_address3": null,
+                "reg_address4": null,
+                "reg_address_postcode": null,
+                "pensionable_earning_type": "unbanded",
+                "automatic_postponement_period": null,
+                "default_percentage": 1.0,
+                "employer_pension_scheme_registration": "SMART10000022",
+                "created_at": "2017-06-26T16:58:21.000+01:00",
+                "updated_at": "2017-06-26T16:58:21.000+01:00",
+                "state": "active",
+                "signatories": [
+                  {
+                    "id": 5,
+                    "email": "john@doe.fr",
+                    "reset_password_token": null,
+                    "reset_password_sent_at": null,
+                    "remember_created_at": null,
+                    "last_sign_in_at": null,
+                    "slug": "fsurname",
+                    "created_at": "2017-06-26T16:58:21.000+01:00",
+                    "updated_at": "2017-06-26T16:58:21.000+01:00",
+                    "gauth_secret": "c3jbtrautcvunnjs53loat7g6w5wff4izrpf53v4rkwh2xfvju7oipuilabfu474",
+                    "gauth_enabled": false,
+                    "gauth_tmp": null,
+                    "forename": "forename",
+                    "surname": "surname",
+                    "title": null,
+                    "authentication_token": "Mp-EpT7ddtmEQzdb5c1i",
+                    "duedil_id": null,
+                    "date_of_birth": null,
+                    "duedil_address": null,
+                    "line2": null,
+                    "city": null,
+                    "county": null,
+                    "building_name": null,
+                    "postcode": null,
+                    "line1": null,
+                    "building_number": null,
+                    "telephone": null,
+                    "referee_id": null,
+                    "referee_type": null,
+                    "referral_state": "ignition",
+                    "referral_clicks": 0,
+                    "referral_reward_name": null,
+                    "authentication_token_generated_at": "2017-06-26T16:58:21.000+01:00",
+                    "male": true,
+                    "role": "signatory",
+                    "middlename": null,
+                    "envelope_state": "ignition",
+                    "enforce_password": false,
+                    "company_id": 22,
+                    "api_key": "sE8a10nKkNi-Jt5rQOc0rA",
+                    "links": [
+
+                    ]
+                  }
+                ],
+                "admins": [
+
+                ]
+              }
+            }
+          },
+          "422": {
+            "description": "When 2 signatories/admins have same emails",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 1609,
+                    "title": "Email address must be unique",
+                    "detail": "This email address is currently in use, please use a different one.",
+                    "source": {
+                      "pointer": "/data/relationships/signatories/0/attributes/email"
+                    }
+                  },
+                  {
+                    "code": 2009,
+                    "title": "Email address must be unique",
+                    "detail": "This email address is currently in use, please use a different one.",
+                    "source": {
+                      "pointer": "/data/relationships/admins/0/attributes/email"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies/{company_id}/customers": {
+      "post": {
+        "summary": "Customers/Create",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "customer",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/customer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 7,
+                "email": "email@gmail.com",
+                "reset_password_token": null,
+                "reset_password_sent_at": null,
+                "remember_created_at": null,
+                "last_sign_in_at": null,
+                "slug": "fsurname6",
+                "created_at": "2017-06-26T16:58:21.000+01:00",
+                "updated_at": "2017-06-26T16:58:21.000+01:00",
+                "gauth_secret": "vmmfu3dlvdv5ycibav5zmlxfmwek3ufcvcb3grbrt3xvwgsr7y4q5ibuiymnrhwb",
+                "gauth_enabled": false,
+                "gauth_tmp": null,
+                "forename": "forename",
+                "surname": "surname",
+                "title": null,
+                "authentication_token": "5z9PLzQk9ix86YpcxAJa",
+                "duedil_id": null,
+                "date_of_birth": "2017-06-25",
+                "duedil_address": null,
+                "line2": null,
+                "city": null,
+                "county": null,
+                "building_name": null,
+                "postcode": "w6 4ra",
+                "line1": null,
+                "building_number": null,
+                "telephone": null,
+                "referee_id": null,
+                "referee_type": null,
+                "referral_state": "ignition",
+                "referral_clicks": 0,
+                "referral_reward_name": null,
+                "authentication_token_generated_at": "2017-06-26T16:58:21.000+01:00",
+                "male": true,
+                "role": "admin",
+                "middlename": null,
+                "envelope_state": "ignition",
+                "enforce_password": true,
+                "company_id": 23,
+                "api_key": "M2T-H_nGAJMVPgMtj94DbA",
+                "links": [
+                  {
+                    "rel": "company",
+                    "title": "company",
+                    "href": "http://api.co.uk:3000/companies/23"
+                  }
+                ]
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid parameters",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 906,
+                    "title": "Email address is a required field.",
+                    "detail": "You need to include the email address.",
+                    "source": {
+                      "pointer": "/data/attributes/email"
+                    }
+                  },
+                  {
+                    "code": 911,
+                    "title": "Forename is a required field.",
+                    "detail": "You need to include the forename.",
+                    "source": {
+                      "pointer": "/data/attributes/forename"
+                    }
+                  },
+                  {
+                    "code": 913,
+                    "title": "Surname is a required field.",
+                    "detail": "You need to include the surname.",
+                    "source": {
+                      "pointer": "/data/attributes/surname"
+                    }
+                  },
+                  {
+                    "code": 915,
+                    "title": "Postcode is a required field.",
+                    "detail": "You need to include the postcode.",
+                    "source": {
+                      "pointer": "/data/attributes/postcode"
+                    }
+                  },
+                  {
+                    "code": 904,
+                    "title": "Date of birth is a required field.",
+                    "detail": "You need to enter the date of birth.",
+                    "source": {
+                      "pointer": "/data/attributes/date_of_birth"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden number of customers (max 50)",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 35,
+                    "title": "Maximum number of create customers reached!",
+                    "detail": "You cannot have more than 50 create customers.",
+                    "source": {
+                      "pointer": "/base"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customers/session": {
+      "get": {
+        "summary": "Customers/Session",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "examples": {
+              "application/json": {
+                "id": 59,
+                "email": "signatory@example.com",
+                "reset_password_token": null,
+                "reset_password_sent_at": null,
+                "remember_created_at": null,
+                "last_sign_in_at": null,
+                "slug": "fsurname",
+                "created_at": "2017-06-26T16:58:26.000+01:00",
+                "updated_at": "2017-06-26T16:58:26.000+01:00",
+                "gauth_secret": "6cgwlezopmz5odpd5ul336ongclusdkdu5douqgyaz4rs3q4akxlbve63ixcliql",
+                "gauth_enabled": false,
+                "gauth_tmp": null,
+                "forename": "forename",
+                "surname": "surname",
+                "title": null,
+                "authentication_token": "hEjdWijQrFWE1Cyyo5yb",
+                "duedil_id": null,
+                "date_of_birth": null,
+                "duedil_address": null,
+                "line2": null,
+                "city": null,
+                "county": null,
+                "building_name": null,
+                "postcode": null,
+                "line1": null,
+                "building_number": null,
+                "telephone": null,
+                "referee_id": null,
+                "referee_type": null,
+                "referral_state": "ignition",
+                "referral_clicks": 0,
+                "referral_reward_name": null,
+                "authentication_token_generated_at": "2017-06-26T16:58:26.000+01:00",
+                "male": true,
+                "role": "signatory",
+                "middlename": null,
+                "envelope_state": "ignition",
+                "enforce_password": false,
+                "company_id": 26,
+                "api_key": "Ul0ofa2MblFjtpokPRPzrw",
+                "links": [
+
+                ]
+              }
+            }
+          },
+          "401": {
+            "description": "Fail",
+            "examples": {
+              "application/json": "HTTP Token: Access denied."
+            }
+          }
+        }
+      }
+    },
+    "/companies/{company_id}/customers/{id}": {
+      "patch": {
+        "summary": "Customers/Update",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "company_id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "customer",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/customer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Host",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Updates a customer. Only the field submitted in the request are used.",
+            "examples": {
+              "application/json": ""
+            }
+          },
+          "403": {
+            "description": "Forbidden email update for signatory with unsigned envelope",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 34,
+                    "title": "Company without envelope.",
+                    "detail": "The Participation Agreement cannot be generated because we are currently generating another one for the same company.",
+                    "source": {
+                      "pointer": "/base"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "422": {
+            "description": "Invalid parameters",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 911,
+                    "title": "Forename is a required field.",
+                    "detail": "You need to include the forename.",
+                    "source": {
+                      "pointer": "/data/attributes/forename"
                     }
                   }
                 ]
@@ -221,32 +946,32 @@
               "application/json": {
                 "id": 3,
                 "category": "Eligible jobholders",
-                "employee_id": 8,
+                "employee_id": 11,
                 "period_type": "Weekly",
                 "gross_qualifying_earnings": null,
                 "pensionable_earnings": 1000.0,
                 "company_percentage": 1.0,
                 "employee_percentage": 1.0,
                 "state": "ignition",
-                "created_at": "2017-06-06T11:01:55.000+01:00",
-                "updated_at": "2017-06-06T11:01:55.000+01:00",
+                "created_at": "2017-06-26T16:58:28.000+01:00",
+                "updated_at": "2017-06-26T16:58:28.000+01:00",
                 "contribute_if_entitled": true,
                 "bill_id": null,
                 "company_amount": 1.0,
                 "employee_amount": 1.0,
                 "voluntary_amount": 0.0,
                 "works_in_uk": true,
-                "starts_on": "2017-06-06",
-                "ends_on": "2017-06-12",
+                "starts_on": "2017-06-26",
+                "ends_on": "2017-07-02",
                 "lower_level": 113.0,
                 "upper_level": 866.0,
                 "trigger_level": 192.0,
-                "pensionable_earning_type": "unbanded",
+                "pensionable_earning_type": "tier1",
                 "links": [
                   {
                     "rel": "employee",
                     "title": "employee",
-                    "href": "http://api.co.uk:3000/companies/20/employees/8"
+                    "href": "http://api.co.uk:3000/companies/32/employees/11"
                   }
                 ]
               }
@@ -266,9 +991,9 @@
                     }
                   },
                   {
-                    "code": 311,
-                    "title": "Period type is a required field.",
-                    "detail": "You need to enter a pay period type.",
+                    "code": 312,
+                    "title": "Period type is not valid.",
+                    "detail": "Valid values for the period types are: Weekly, Fornightly, Four Weekly, Monthly, Quarterly, Bi Annually, Annually.",
                     "source": {
                       "pointer": "/data/attributes/period_type"
                     }
@@ -295,6 +1020,23 @@
                     "detail": "You need to enter a gross qualifying earnings.",
                     "source": {
                       "pointer": "/data/attributes/gross_qualifying_earnings"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden self_certified",
+            "examples": {
+              "application/json": {
+                "errors": [
+                  {
+                    "code": 21,
+                    "title": "Contribution cannot be created.",
+                    "detail": "The contribution cannot be created as the company pensionable earning type is self-certification, and the contribution does not have the amounts calculated.",
+                    "source": {
+                      "pointer": "/base"
                     }
                   }
                 ]
@@ -343,28 +1085,28 @@
           }
         ],
         "responses": {
-          "200": {
+          "201": {
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 10,
+                "id": 13,
                 "email": null,
                 "reset_password_token": null,
                 "reset_password_sent_at": null,
                 "remember_created_at": null,
                 "last_sign_in_at": null,
-                "slug": "fsurname7",
-                "created_at": "2017-06-06T11:01:56.000+01:00",
-                "updated_at": "2017-06-06T11:01:56.000+01:00",
+                "slug": "fsurname",
+                "created_at": "2017-06-26T16:58:29.000+01:00",
+                "updated_at": "2017-06-26T16:58:29.000+01:00",
                 "confirmation_token": null,
-                "gauth_secret": "7mbasxv3nelig53xx3cyerfv5lu6glkjpcymqffampq2thoyahgpghiaxtqkw7lz",
+                "gauth_secret": "lcmrhgilmllio55semrqkafvhertcovf2lfh7myxtzsfuuybhdrrjjq25nmljbvm",
                 "gauth_enabled": false,
                 "gauth_tmp": null,
                 "forename": "forename",
                 "surname": "surname",
                 "title": null,
-                "authentication_token": "MRCyVkBamgFqL5S5Jgor",
-                "date_of_birth": "2017-06-05",
+                "authentication_token": "-QbbeF1Yrbsqz4FtFhsF",
+                "date_of_birth": "2017-06-25",
                 "group_id": null,
                 "line2": null,
                 "city": null,
@@ -375,7 +1117,7 @@
                 "national_insurance_number": null,
                 "works_in_uk": true,
                 "starts_on": "2016-01-01",
-                "authentication_token_generated_at": "2017-06-06T11:01:56.000+01:00",
+                "authentication_token_generated_at": "2017-06-26T16:58:29.000+01:00",
                 "male": true,
                 "company_percentage": 1.0,
                 "company_percentage_matched": 1.0,
@@ -389,11 +1131,11 @@
                 "opt_state": "ignition",
                 "opt_in_on": null,
                 "opt_out_window_starts_on": null,
-                "company_id": 22,
-                "api_key": "gp_FNOitvizyuqdrnOR95Q",
+                "company_id": 34,
+                "api_key": "r6BTMHTBeJzmp4EEkZkuWQ",
                 "automatically_enrolled": false,
                 "external_id": null,
-                "fund_id": 1,
+                "fund_id": 0,
                 "customer_id": null,
                 "referral_clicks": 0,
                 "contribution_ids": [
@@ -403,7 +1145,7 @@
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "http://api.co.uk:3000/companies/22"
+                    "href": "http://api.co.uk:3000/companies/34"
                   }
                 ]
               }
@@ -559,6 +1301,60 @@
         ]
       }
     },
+    "adviser": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Adviser name"
+        },
+        "address": {
+          "type": "string",
+          "description": "Adviser address"
+        },
+        "title": {
+          "type": "string",
+          "description": "First adviser user's title.",
+          "enum": [
+            "Mr",
+            "Mrs",
+            "Ms",
+            "Miss",
+            "Dr"
+          ]
+        },
+        "email": {
+          "type": "string",
+          "description": "First adviser user's email address"
+        },
+        "forename": {
+          "type": "string",
+          "description": "First adviser user's forename"
+        },
+        "surname": {
+          "type": "string",
+          "description": "First adviser user's surname"
+        },
+        "telephone": {
+          "type": "string",
+          "description": "First adviser user's telephone number"
+        },
+        "password": {
+          "type": "string",
+          "format": "password",
+          "description": "First adviser user's password"
+        }
+      },
+      "required": [
+        "name",
+        "address",
+        "email",
+        "forename",
+        "surname",
+        "telephone",
+        "password"
+      ]
+    },
     "employee": {
       "type": "object",
       "properties": {
@@ -575,23 +1371,23 @@
         },
         "forename": {
           "type": "string",
-          "description": "The employee forename."
+          "description": "Employee forename."
         },
         "surname": {
           "type": "string",
-          "description": "The employee surname."
+          "description": "Employee surname."
         },
         "male": {
           "type": "boolean",
-          "description": "The employee gender: true (male), false (female)."
+          "description": "Employee gender: true (male), false (female)."
         },
         "email": {
           "type": "string",
-          "description": "The employee email address."
+          "description": "Employee email address."
         },
         "telephone": {
           "type": "string",
-          "description": "The employee telephone number."
+          "description": "Employee telephone number."
         },
         "line1": {
           "type": "string",
@@ -603,20 +1399,20 @@
         },
         "city": {
           "type": "string",
-          "description": "The employee city."
+          "description": "Employee city."
         },
         "county": {
           "type": "string",
-          "description": "The employee county."
+          "description": "Employee county."
         },
         "postcode": {
           "type": "string",
-          "description": "The employee postcode."
+          "description": "Employee postcode."
         },
         "date_of_birth": {
           "type": "string",
           "format": "date",
-          "description": "The employee date of birth."
+          "description": "Employee date of birth."
         },
         "national_insurance_number": {
           "type": "string",
@@ -626,7 +1422,7 @@
         "starts_on": {
           "type": "string",
           "format": "date",
-          "description": "The employee start date."
+          "description": "Employee start date."
         },
         "opt_state": {
           "type": "string",
@@ -671,7 +1467,7 @@
           "format": "float",
           "minimum": 0,
           "maximum": 100,
-          "description": "The company contribution percentage for the employee."
+          "description": "The company contribution percentage for the employee. It will override the company default percentage."
         },
         "company_match": {
           "type": "boolean",
@@ -779,6 +1575,261 @@
         "period_type",
         "starts_on",
         "ends_on"
+      ]
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name"
+        },
+        "registration_number": {
+          "type": "string",
+          "description": "Company registration number."
+        },
+        "legal_structure": {
+          "type": "string",
+          "description": "Company legal structure.",
+          "enum": [
+            "Limited Company",
+            "Charity",
+            "Sole Trader",
+            "Ordinary Business Partnership",
+            "Unincorporated Association",
+            "Limited Liability Partnership",
+            "Unincorporated",
+            "Other"
+          ]
+        },
+        "reg_address1": {
+          "type": "string",
+          "description": "Company registration address line 1"
+        },
+        "reg_address2": {
+          "type": "string",
+          "description": "Company registration address line 2"
+        },
+        "reg_address3": {
+          "type": "string",
+          "description": "Company registration address line 3"
+        },
+        "reg_address4": {
+          "type": "string",
+          "description": "Company registration address line 4"
+        },
+        "reg_address_postcode": {
+          "type": "string",
+          "description": "Company registration address postcode"
+        },
+        "tax_office_number": {
+          "type": "string",
+          "description": "Company PAYE reference first part"
+        },
+        "tax_office_employer_reference": {
+          "type": "string",
+          "description": "Company PAYE reference second part"
+        },
+        "trading_address1": {
+          "type": "string",
+          "description": "Company trading address line 1"
+        },
+        "trading_address2": {
+          "type": "string",
+          "description": "Company trading address line 2"
+        },
+        "trading_address3": {
+          "type": "string",
+          "description": "Company trading address line 3"
+        },
+        "trading_address_postcode": {
+          "type": "string",
+          "description": "Company trading address postcode"
+        },
+        "pension_regulator_letter_code": {
+          "type": "string",
+          "description": "Company Pension Regulator letter code"
+        },
+        "staging_on": {
+          "type": "string",
+          "format": "date",
+          "description": "Company staging date"
+        },
+        "automatic_postponement_period": {
+          "type": "string",
+          "enum": [
+            "1 week",
+            "2 weeks",
+            "3 weeks",
+            "4 weeks",
+            "1 month",
+            "2 months",
+            "3 months"
+          ],
+          "description": "This option will automatically create a postponement with the provided period length when any new employee is created."
+        },
+        "pensionable_earning_type": {
+          "type": "string",
+          "enum": [
+            "banded",
+            "unbanded",
+            "tier1",
+            "tier2",
+            "tier3"
+          ],
+          "default": "unbanded",
+          "description": "It defines how pensionable earnings are calculated. More information about each type can be found here: [Pensionable Earning Support Page](http://support.autoenrolment.co.uk/scheme-setup/pensionable-earnings/pensionable-earnings)"
+        },
+        "default_percentage": {
+          "type": "number",
+          "format": "float",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 1,
+          "description": "The company default percentage which will be applied to calculate the company amount of a contribution. It can be overwritten by the employee company amount."
+        },
+        "signatories": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "description": "A list of signatories (i.e. directors) of the company who will sign the Participation Agreement with Smart Pension.",
+          "items": {
+            "$ref": "#/definitions/customer"
+          }
+        },
+        "admins": {
+          "type": "array",
+          "maxItems": 50,
+          "description": "A list of administrators of the company who will be able to manage the pension scheme.",
+          "items": {
+            "$ref": "#/definitions/customer"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "registration_number",
+        "legal_structure",
+        "signatories"
+      ]
+    },
+    "customer": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Customer email address"
+        },
+        "title": {
+          "type": "string",
+          "enum": [
+            "Mr",
+            "Mrs",
+            "Ms",
+            "Miss",
+            "Dr"
+          ],
+          "description": "Customer title"
+        },
+        "forename": {
+          "type": "string",
+          "description": "Customer forename"
+        },
+        "surname": {
+          "type": "string",
+          "description": "Customer surname"
+        },
+        "telephone": {
+          "type": "string",
+          "description": "Customer telephone number"
+        },
+        "date_of_birth": {
+          "type": "string",
+          "format": "date",
+          "description": "Customer date of birth"
+        },
+        "male": {
+          "type": "boolean",
+          "description": "The customer gender: true (male), false (female)."
+        },
+        "line1": {
+          "type": "string",
+          "description": "Customer address line 1"
+        },
+        "line2": {
+          "type": "string",
+          "description": "Customer address line 2"
+        },
+        "city": {
+          "type": "string",
+          "description": "Customer address city"
+        },
+        "county": {
+          "type": "string",
+          "description": "Customer address county"
+        },
+        "postcode": {
+          "type": "string",
+          "description": "Customer address postcode"
+        },
+        "building_name": {
+          "type": "string",
+          "description": "Customer building name"
+        },
+        "building_number": {
+          "type": "string",
+          "description": "Customer building number"
+        }
+      },
+      "required": [
+        "email",
+        "forename",
+        "surname",
+        "postcode",
+        "date_of_birth"
+      ]
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Adviser user email address"
+        },
+        "title": {
+          "type": "string",
+          "enum": [
+            "Mr",
+            "Mrs",
+            "Ms",
+            "Miss",
+            "Dr"
+          ],
+          "description": "Adviser user title"
+        },
+        "forename": {
+          "type": "string",
+          "description": "Adviser user forename"
+        },
+        "surname": {
+          "type": "string",
+          "description": "Adviser user surname"
+        },
+        "telephone": {
+          "type": "string",
+          "description": "Adviser user telephone number"
+        },
+        "password": {
+          "type": "string",
+          "description": "Adviser user password"
+        }
+      },
+      "required": [
+        "email",
+        "forename",
+        "surname",
+        "password",
+        "telephone"
       ]
     }
   }
