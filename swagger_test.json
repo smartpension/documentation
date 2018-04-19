@@ -18,6 +18,7 @@
   "x-samples-languages": [
     "curl"
   ],
+  "x-proxy-enabled": true,
   "securityDefinitions": {
     "oAuth2": {
       "type": "oauth2",
@@ -58,22 +59,22 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 417,
+                "id": 469,
                 "name": "name",
                 "type": "Adviser",
                 "address": "address",
-                "created_at": "2018-04-19T13:57:30.000+01:00",
-                "updated_at": "2018-04-19T13:57:30.000+01:00",
+                "created_at": "2018-04-19T14:33:40.000+01:00",
+                "updated_at": "2018-04-19T14:33:40.000+01:00",
                 "signup_start": "signup_start_text",
                 "signup_finish": "signup_finish_text",
-                "user_id": 399,
+                "user_id": 463,
                 "title": "Mr",
                 "forename": "forename",
                 "surname": "surname",
                 "email": "name@email.com",
                 "telephone": "0123456789",
-                "api_key": "c5EGE1dwcMxqMbe3dr6tAg",
-                "authorization_redirect_uri": "https://id.host.com/user/callbacks/smartpension?code=bee23497d0d80bc5ee6813c49acac18110f8d4ae39b48db919fff297f58860d4"
+                "api_key": "GvQI6rbP1lqWo5KJOql-Lw",
+                "authorization_redirect_uri": "https://id.host.com/user/callbacks/smartpension?code=891c59ed44030ec230c46c13f69b7c0086241053534d85f97d0a3c1bef6227a7"
               }
             }
           },
@@ -206,12 +207,12 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 418,
+                "id": 470,
                 "name": "super",
                 "type": "Adviser",
                 "address": "address",
-                "created_at": "2018-04-19T13:57:31.000+01:00",
-                "updated_at": "2018-04-19T13:57:31.000+01:00",
+                "created_at": "2018-04-19T14:33:41.000+01:00",
+                "updated_at": "2018-04-19T14:33:41.000+01:00",
                 "signup_start": null,
                 "signup_finish": null
               }
@@ -350,21 +351,21 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 406,
+                "id": 470,
                 "email": "email@email.com",
                 "title": null,
                 "forename": "forename",
                 "surname": "surename",
-                "api_key": "avtTU4McviEVHWKLUP0jbQ",
+                "api_key": "yL0T3qFav_mlcVF2KILUIw",
                 "telephone": "0123456789",
-                "adviser_id": 423,
-                "created_at": "2018-04-19T13:57:32.000+01:00",
-                "updated_at": "2018-04-19T13:57:32.000+01:00",
+                "adviser_id": 475,
+                "created_at": "2018-04-19T14:33:42.000+01:00",
+                "updated_at": "2018-04-19T14:33:42.000+01:00",
                 "links": [
                   {
                     "rel": "adviser",
                     "title": "adviser",
-                    "href": "https://api.host.com/advisers/423"
+                    "href": "https://api.host.com/advisers/475"
                   }
                 ]
               }
@@ -521,74 +522,74 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/advisers/433/users"
+                    "href": "http://api.example.com/advisers/485/users"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/advisers/433/users?offset=0&limit=50"
+                    "href": "http://api.example.com/advisers/485/users?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/advisers/433/users?offset=0&limit=50"
+                    "href": "http://api.example.com/advisers/485/users?offset=0&limit=50"
                   }
                 ],
                 "users": [
                   {
-                    "id": 421,
+                    "id": 485,
                     "email": "email@example.com",
                     "title": null,
                     "forename": "forename",
                     "surname": "surname",
-                    "api_key": "IgMI5bFZbSz5qT8_IdYrKA",
+                    "api_key": "2d6uTGZU6LJyZcZexPrAOQ",
                     "telephone": "0123456789",
-                    "adviser_id": 433,
-                    "created_at": "2018-04-19T13:57:34.000+01:00",
-                    "updated_at": "2018-04-19T13:57:34.000+01:00",
+                    "adviser_id": 485,
+                    "created_at": "2018-04-19T14:33:44.000+01:00",
+                    "updated_at": "2018-04-19T14:33:44.000+01:00",
                     "links": [
                       {
                         "rel": "adviser",
                         "title": "adviser",
-                        "href": "https://api.host.com/advisers/433"
+                        "href": "https://api.host.com/advisers/485"
                       }
                     ]
                   },
                   {
-                    "id": 422,
+                    "id": 486,
                     "email": "user1@example.com",
                     "title": null,
                     "forename": "abcd",
                     "surname": "surname",
-                    "api_key": "hnbC7urF7uliihSboO1IeQ",
+                    "api_key": "UavTJgvXfuOHuvXGQn1GcQ",
                     "telephone": "0123456789",
-                    "adviser_id": 433,
-                    "created_at": "2018-04-19T13:57:34.000+01:00",
-                    "updated_at": "2018-04-19T13:57:34.000+01:00",
+                    "adviser_id": 485,
+                    "created_at": "2018-04-19T14:33:44.000+01:00",
+                    "updated_at": "2018-04-19T14:33:44.000+01:00",
                     "links": [
                       {
                         "rel": "adviser",
                         "title": "adviser",
-                        "href": "https://api.host.com/advisers/433"
+                        "href": "https://api.host.com/advisers/485"
                       }
                     ]
                   },
                   {
-                    "id": 423,
+                    "id": 487,
                     "email": "user2@example.com",
                     "title": null,
                     "forename": "wxyz",
                     "surname": "surname",
-                    "api_key": "Hk63hjqstzK7t_dwGRgung",
+                    "api_key": "trvudTScQhm2eDofPXQuDA",
                     "telephone": "0123456789",
-                    "adviser_id": 433,
-                    "created_at": "2018-04-19T13:57:34.000+01:00",
-                    "updated_at": "2018-04-19T13:57:34.000+01:00",
+                    "adviser_id": 485,
+                    "created_at": "2018-04-19T14:33:44.000+01:00",
+                    "updated_at": "2018-04-19T14:33:44.000+01:00",
                     "links": [
                       {
                         "rel": "adviser",
                         "title": "adviser",
-                        "href": "https://api.host.com/advisers/433"
+                        "href": "https://api.host.com/advisers/485"
                       }
                     ]
                   }
@@ -705,21 +706,21 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 416,
+                "id": 480,
                 "email": "email@example.com",
                 "title": null,
                 "forename": "forename",
                 "surname": "surname",
-                "api_key": "8V4ZwUyB0kyeuesBUpHaqw",
+                "api_key": "umv1DBzHDb47AiWnrPlMSA",
                 "telephone": "0123456789",
-                "adviser_id": 428,
-                "created_at": "2018-04-19T13:57:33.000+01:00",
-                "updated_at": "2018-04-19T13:57:33.000+01:00",
+                "adviser_id": 480,
+                "created_at": "2018-04-19T14:33:43.000+01:00",
+                "updated_at": "2018-04-19T14:33:43.000+01:00",
                 "links": [
                   {
                     "rel": "adviser",
                     "title": "adviser",
-                    "href": "https://api.host.com/advisers/428"
+                    "href": "https://api.host.com/advisers/480"
                   }
                 ]
               }
@@ -881,13 +882,13 @@
                       "X-XSS-Protection": "1; mode=block",
                       "X-Content-Type-Options": "nosniff",
                       "Content-Type": "application/json; charset=utf-8",
-                      "ETag": "W/\"adc4dca5ae9ca1ace500a28bdc228e94\"",
+                      "ETag": "W/\"4c62bce1f43aa8058d51cefbbfd8834a\"",
                       "Cache-Control": "max-age=0, private, must-revalidate",
-                      "X-Request-Id": "accc0385-731d-4e6b-b9a3-0851ae7fbf54",
-                      "X-Runtime": "0.065503"
+                      "X-Request-Id": "831bc31e-eba1-4fb2-a710-e1a8ae32cd85",
+                      "X-Runtime": "0.066834"
                     },
                     "body": {
-                      "id": 2224,
+                      "id": 2468,
                       "name": "name",
                       "slug": "name",
                       "registration_number": "number",
@@ -909,13 +910,13 @@
                       "pensionable_earning_type": "unbanded",
                       "automatic_postponement_period": null,
                       "default_percentage": 2.0,
-                      "employer_pension_scheme_registration": "SMART10002224",
-                      "created_at": "2018-04-19T13:57:35.000+01:00",
-                      "updated_at": "2018-04-19T13:57:35.000+01:00",
+                      "employer_pension_scheme_registration": "SMART10002468",
+                      "created_at": "2018-04-19T14:33:45.000+01:00",
+                      "updated_at": "2018-04-19T14:33:45.000+01:00",
                       "state": "active",
                       "contribution_charge_id": null
                     },
-                    "path": "companies/2224",
+                    "path": "companies/2468",
                     "http_method": null,
                     "data": null
                   },
@@ -926,13 +927,13 @@
                       "X-XSS-Protection": "1; mode=block",
                       "X-Content-Type-Options": "nosniff",
                       "Content-Type": "application/json; charset=utf-8",
-                      "ETag": "W/\"adc4dca5ae9ca1ace500a28bdc228e94\"",
+                      "ETag": "W/\"4c62bce1f43aa8058d51cefbbfd8834a\"",
                       "Cache-Control": "max-age=0, private, must-revalidate",
-                      "X-Request-Id": "c409a0ab-730e-4433-8641-5aa1e4548948",
-                      "X-Runtime": "0.013247"
+                      "X-Request-Id": "49b5cd69-dee6-41d8-a2ed-45ed3f1e2172",
+                      "X-Runtime": "0.013283"
                     },
                     "body": {
-                      "id": 2224,
+                      "id": 2468,
                       "name": "name",
                       "slug": "name",
                       "registration_number": "number",
@@ -954,13 +955,13 @@
                       "pensionable_earning_type": "unbanded",
                       "automatic_postponement_period": null,
                       "default_percentage": 2.0,
-                      "employer_pension_scheme_registration": "SMART10002224",
-                      "created_at": "2018-04-19T13:57:35.000+01:00",
-                      "updated_at": "2018-04-19T13:57:35.000+01:00",
+                      "employer_pension_scheme_registration": "SMART10002468",
+                      "created_at": "2018-04-19T14:33:45.000+01:00",
+                      "updated_at": "2018-04-19T14:33:45.000+01:00",
                       "state": "active",
                       "contribution_charge_id": null
                     },
-                    "path": "companies/2224",
+                    "path": "companies/2468",
                     "http_method": null,
                     "data": null
                   }
@@ -1016,32 +1017,32 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2225/contributions"
+                    "href": "http://api.example.com/companies/2469/contributions"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2225/contributions?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2469/contributions?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2225/contributions?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2469/contributions?offset=0&limit=50"
                   }
                 ],
                 "contributions": [
                   {
-                    "id": 349,
+                    "id": 397,
                     "category": "Eligible jobholders",
-                    "employee_id": 1075,
+                    "employee_id": 1199,
                     "period_type": "Weekly",
                     "gross_qualifying_earnings": 1000.0,
                     "pensionable_earnings": 1000.0,
                     "company_percentage": 2.0,
                     "employee_percentage": 3.0,
                     "state": "created",
-                    "created_at": "2018-04-19T13:57:36.000+01:00",
-                    "updated_at": "2018-04-19T13:57:36.000+01:00",
+                    "created_at": "2018-04-19T14:33:46.000+01:00",
+                    "updated_at": "2018-04-19T14:33:46.000+01:00",
                     "contribute_if_entitled": true,
                     "company_amount": 20.0,
                     "employee_amount": 30.0,
@@ -1057,22 +1058,22 @@
                       {
                         "rel": "employee",
                         "title": "employee",
-                        "href": "https://api.host.com/companies/2225/employees/1075"
+                        "href": "https://api.host.com/companies/2469/employees/1199"
                       }
                     ]
                   },
                   {
-                    "id": 350,
+                    "id": 398,
                     "category": "Eligible jobholders",
-                    "employee_id": 1075,
+                    "employee_id": 1199,
                     "period_type": "Weekly",
                     "gross_qualifying_earnings": 1000.0,
                     "pensionable_earnings": 1000.0,
                     "company_percentage": 2.0,
                     "employee_percentage": 3.0,
                     "state": "created",
-                    "created_at": "2018-04-19T13:57:36.000+01:00",
-                    "updated_at": "2018-04-19T13:57:36.000+01:00",
+                    "created_at": "2018-04-19T14:33:46.000+01:00",
+                    "updated_at": "2018-04-19T14:33:46.000+01:00",
                     "contribute_if_entitled": true,
                     "company_amount": 20.0,
                     "employee_amount": 30.0,
@@ -1088,7 +1089,7 @@
                       {
                         "rel": "employee",
                         "title": "employee",
-                        "href": "https://api.host.com/companies/2225/employees/1075"
+                        "href": "https://api.host.com/companies/2469/employees/1199"
                       }
                     ]
                   }
@@ -1125,7 +1126,7 @@
             "description": "Success - automatic linking with an Adviser",
             "examples": {
               "application/json": {
-                "id": 2228,
+                "id": 2472,
                 "name": "name",
                 "slug": "name",
                 "registration_number": "123",
@@ -1147,29 +1148,29 @@
                 "pensionable_earning_type": "unbanded",
                 "automatic_postponement_period": null,
                 "default_percentage": 2.0,
-                "employer_pension_scheme_registration": "SMART10002228",
-                "created_at": "2018-04-19T13:57:37.000+01:00",
-                "updated_at": "2018-04-19T13:57:37.000+01:00",
+                "employer_pension_scheme_registration": "SMART10002472",
+                "created_at": "2018-04-19T14:33:46.000+01:00",
+                "updated_at": "2018-04-19T14:33:46.000+01:00",
                 "state": "active",
                 "contribution_charge_id": null,
                 "signatories": [
                   {
-                    "id": 1190,
+                    "id": 1398,
                     "email": "john@doe.fr",
                     "reset_password_token": null,
                     "reset_password_sent_at": null,
                     "remember_created_at": null,
                     "last_sign_in_at": null,
                     "slug": "fsurname",
-                    "created_at": "2018-04-19T13:57:37.000+01:00",
-                    "updated_at": "2018-04-19T13:57:37.000+01:00",
-                    "gauth_secret": "ktn5pfjt4ie2oazwpgaxvg25esjnjibps3tnxcr4n6dfcdkxctpaixaqeqctazu6",
+                    "created_at": "2018-04-19T14:33:47.000+01:00",
+                    "updated_at": "2018-04-19T14:33:47.000+01:00",
+                    "gauth_secret": "7d2n3tk2xfcpnr6fegxhal4oz5wwt6p4hw5msqeti5eoz5ol2ho7dsuw4j7iwp4d",
                     "gauth_enabled": false,
                     "gauth_tmp": null,
                     "forename": "forename",
                     "surname": "surname",
                     "title": null,
-                    "authentication_token": "zVjiwQGYzKhmd7qFq62z",
+                    "authentication_token": "cdhH84iY2QqUHxPPHgDz",
                     "date_of_birth": null,
                     "line2": null,
                     "city": null,
@@ -1184,19 +1185,19 @@
                     "referral_state": "ignition",
                     "referral_clicks": 0,
                     "referral_reward_name": null,
-                    "authentication_token_generated_at": "2018-04-19T13:57:37.000+01:00",
+                    "authentication_token_generated_at": "2018-04-19T14:33:47.000+01:00",
                     "male": true,
                     "role": "signatory",
                     "middlename": null,
                     "envelope_state": "ignition",
                     "enforce_password": false,
-                    "company_id": 2228,
-                    "api_key": "IJFGKUcu-czJVw_ys557Hw",
+                    "company_id": 2472,
+                    "api_key": "ffQ40bsXkpplHTOUoyXxNQ",
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2228"
+                        "href": "https://api.host.com/companies/2472"
                       }
                     ]
                   }
@@ -1273,22 +1274,22 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1192,
+                "id": 1400,
                 "email": "email@gmail.com",
                 "reset_password_token": null,
                 "reset_password_sent_at": null,
                 "remember_created_at": null,
                 "last_sign_in_at": null,
-                "slug": "fsurname2",
-                "created_at": "2018-04-19T13:57:37.000+01:00",
-                "updated_at": "2018-04-19T13:57:37.000+01:00",
-                "gauth_secret": "lmehm3zaab3yakjdn6iqihyzelqqp6iqahmurybhkzz25xtyc5ntl4wszwtrnanm",
+                "slug": "fsurname9",
+                "created_at": "2018-04-19T14:33:47.000+01:00",
+                "updated_at": "2018-04-19T14:33:47.000+01:00",
+                "gauth_secret": "zpfk3dwrb2kmxfkwtx7i7jyevndxm3lg35vgutr5jekc5dhy7ircz6fjwqpxg2jg",
                 "gauth_enabled": false,
                 "gauth_tmp": null,
                 "forename": "forename",
                 "surname": "surname",
                 "title": null,
-                "authentication_token": "Yh4DwRr2ca9uj7Sknz4C",
+                "authentication_token": "sSdszLNfWGss_q2VHYW4",
                 "date_of_birth": "2018-04-18",
                 "line2": null,
                 "city": null,
@@ -1303,19 +1304,19 @@
                 "referral_state": "ignition",
                 "referral_clicks": 0,
                 "referral_reward_name": null,
-                "authentication_token_generated_at": "2018-04-19T13:57:37.000+01:00",
+                "authentication_token_generated_at": "2018-04-19T14:33:47.000+01:00",
                 "male": true,
                 "role": "admin",
                 "middlename": null,
                 "envelope_state": "ignition",
                 "enforce_password": true,
-                "company_id": 2229,
-                "api_key": "d-jfxo7CR3lVt7rWG2H1iQ",
+                "company_id": 2473,
+                "api_key": "b4-dgEQqhOtbt5OhKkKaTQ",
                 "links": [
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2229"
+                    "href": "https://api.host.com/companies/2473"
                   }
                 ]
               }
@@ -1473,37 +1474,37 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2236/customers"
+                    "href": "http://api.example.com/companies/2480/customers"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2236/customers?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2480/customers?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2236/customers?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2480/customers?offset=0&limit=50"
                   }
                 ],
                 "customers": [
                   {
-                    "id": 1204,
+                    "id": 1412,
                     "email": "signatory@example.com",
                     "reset_password_token": null,
                     "reset_password_sent_at": null,
                     "remember_created_at": null,
                     "last_sign_in_at": null,
                     "slug": "fsurname",
-                    "created_at": "2018-04-19T13:57:39.000+01:00",
-                    "updated_at": "2018-04-19T13:57:39.000+01:00",
-                    "gauth_secret": "j7q7yuqmd4yhcdxs6n7wq7lp6aossruvqsakb2ggnersdsa6kvhjdb5kijzrayso",
+                    "created_at": "2018-04-19T14:33:49.000+01:00",
+                    "updated_at": "2018-04-19T14:33:49.000+01:00",
+                    "gauth_secret": "fzmx27cu5gpk2dnytsdnqln3jpuwigmjbfiqzmc2d3grkxzdbuzz72vlpqcfkvtf",
                     "gauth_enabled": false,
                     "gauth_tmp": null,
                     "forename": "forename",
                     "surname": "surname",
                     "title": null,
-                    "authentication_token": "QFU1zFLYANtk4GjKGFrv",
+                    "authentication_token": "Dbs9jsZk1aQb_exsPG_z",
                     "date_of_birth": null,
                     "line2": null,
                     "city": null,
@@ -1518,39 +1519,39 @@
                     "referral_state": "ignition",
                     "referral_clicks": 0,
                     "referral_reward_name": null,
-                    "authentication_token_generated_at": "2018-04-19T13:57:39.000+01:00",
+                    "authentication_token_generated_at": "2018-04-19T14:33:49.000+01:00",
                     "male": true,
                     "role": "signatory",
                     "middlename": null,
                     "envelope_state": "ignition",
                     "enforce_password": false,
-                    "company_id": 2236,
-                    "api_key": "aSjms4hwMDjYG_U6BW-Eww",
+                    "company_id": 2480,
+                    "api_key": "HHlOWlDYeqIYv0F_oC4Dqg",
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2236"
+                        "href": "https://api.host.com/companies/2480"
                       }
                     ]
                   },
                   {
-                    "id": 1205,
+                    "id": 1413,
                     "email": "email1@example.com",
                     "reset_password_token": null,
                     "reset_password_sent_at": null,
                     "remember_created_at": null,
                     "last_sign_in_at": null,
-                    "slug": "fsurname4",
-                    "created_at": "2018-04-19T13:57:39.000+01:00",
-                    "updated_at": "2018-04-19T13:57:39.000+01:00",
-                    "gauth_secret": "qvjf6xlz3bky6r3jhct4hgfguzxruk5xrubspqn7hwwp3avtjxy67x3cu7cn3eb5",
+                    "slug": "fsurname3",
+                    "created_at": "2018-04-19T14:33:49.000+01:00",
+                    "updated_at": "2018-04-19T14:33:49.000+01:00",
+                    "gauth_secret": "bv4zadoakkts5dhzjfqacekixvulb6szny34nyda26wts3a2pt4zd4uac7lga3j2",
                     "gauth_enabled": false,
                     "gauth_tmp": null,
                     "forename": "forename",
                     "surname": "surname",
                     "title": null,
-                    "authentication_token": "Mbhor_dmtrnbisBV5Huu",
+                    "authentication_token": "Mvgj66nJJMbkvNS_8jza",
                     "date_of_birth": "2003-04-19",
                     "line2": null,
                     "city": null,
@@ -1565,39 +1566,39 @@
                     "referral_state": "ignition",
                     "referral_clicks": 0,
                     "referral_reward_name": null,
-                    "authentication_token_generated_at": "2018-04-19T13:57:39.000+01:00",
+                    "authentication_token_generated_at": "2018-04-19T14:33:49.000+01:00",
                     "male": true,
                     "role": "admin",
                     "middlename": null,
                     "envelope_state": "ignition",
                     "enforce_password": true,
-                    "company_id": 2236,
-                    "api_key": "ytHWTy7GYspc85CBAje-Qg",
+                    "company_id": 2480,
+                    "api_key": "55uNzD_0Vf7kCN1LRySikg",
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2236"
+                        "href": "https://api.host.com/companies/2480"
                       }
                     ]
                   },
                   {
-                    "id": 1206,
+                    "id": 1414,
                     "email": "email2@example.com",
                     "reset_password_token": null,
                     "reset_password_sent_at": null,
                     "remember_created_at": null,
                     "last_sign_in_at": null,
-                    "slug": "fsurname1",
-                    "created_at": "2018-04-19T13:57:39.000+01:00",
-                    "updated_at": "2018-04-19T13:57:39.000+01:00",
-                    "gauth_secret": "at4jzuxnlct3ur73v2wd4ivtxc5yr4dx6keidajd4v7x7alup6mm6nmocz4swulj",
+                    "slug": "fsurname38",
+                    "created_at": "2018-04-19T14:33:49.000+01:00",
+                    "updated_at": "2018-04-19T14:33:49.000+01:00",
+                    "gauth_secret": "uyecettx73hhst5gjmssvtt5b34yfrustsof2fkuizxru2shknf2q5xvg5wsex3g",
                     "gauth_enabled": false,
                     "gauth_tmp": null,
                     "forename": "forename",
                     "surname": "surname",
                     "title": null,
-                    "authentication_token": "jzn5UcS9r3audSJ-dFb4",
+                    "authentication_token": "3ssjg5MCEVZQNsR4kKPA",
                     "date_of_birth": "2003-04-19",
                     "line2": null,
                     "city": null,
@@ -1612,19 +1613,19 @@
                     "referral_state": "ignition",
                     "referral_clicks": 0,
                     "referral_reward_name": null,
-                    "authentication_token_generated_at": "2018-04-19T13:57:39.000+01:00",
+                    "authentication_token_generated_at": "2018-04-19T14:33:49.000+01:00",
                     "male": true,
                     "role": "admin",
                     "middlename": null,
                     "envelope_state": "ignition",
                     "enforce_password": true,
-                    "company_id": 2236,
-                    "api_key": "HK_ar013czZ0HcMZBh3W2w",
+                    "company_id": 2480,
+                    "api_key": "cHmX2YLW5VB7znrhnLXzVA",
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2236"
+                        "href": "https://api.host.com/companies/2480"
                       }
                     ]
                   }
@@ -1743,22 +1744,22 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1202,
+                "id": 1410,
                 "email": "signatory@example.com",
                 "reset_password_token": null,
                 "reset_password_sent_at": null,
                 "remember_created_at": null,
                 "last_sign_in_at": null,
                 "slug": "fsurname",
-                "created_at": "2018-04-19T13:57:39.000+01:00",
-                "updated_at": "2018-04-19T13:57:39.000+01:00",
-                "gauth_secret": "3ijvpifgokzjzdsqefj3vbvaitvk6p75q56vhaadoo6vkorfdao6xg7yuwud3isu",
+                "created_at": "2018-04-19T14:33:48.000+01:00",
+                "updated_at": "2018-04-19T14:33:48.000+01:00",
+                "gauth_secret": "ecj75qxcpemncguehgknffisvizuhtikucmra35w5bda5qodv7ne6t6av7kf4uvo",
                 "gauth_enabled": false,
                 "gauth_tmp": null,
                 "forename": "forename",
                 "surname": "surname",
                 "title": null,
-                "authentication_token": "7zVD1uWNDDby3Fzty2ra",
+                "authentication_token": "GZNUYGsz6kEySifSAZ3y",
                 "date_of_birth": null,
                 "line2": null,
                 "city": null,
@@ -1773,19 +1774,19 @@
                 "referral_state": "ignition",
                 "referral_clicks": 0,
                 "referral_reward_name": null,
-                "authentication_token_generated_at": "2018-04-19T13:57:39.000+01:00",
+                "authentication_token_generated_at": "2018-04-19T14:33:48.000+01:00",
                 "male": true,
                 "role": "signatory",
                 "middlename": null,
                 "envelope_state": "ignition",
                 "enforce_password": false,
-                "company_id": 2234,
-                "api_key": "5X_UrBaQOKE9xuPq5ofcew",
+                "company_id": 2478,
+                "api_key": "a4pLM6IIXx2W1cCQrQpoKA",
                 "links": [
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2234"
+                    "href": "https://api.host.com/companies/2478"
                   }
                 ]
               }
@@ -1949,17 +1950,17 @@
             "description": "Creates a contribution with pensionable earnings and amounts",
             "examples": {
               "application/json": {
-                "id": 352,
+                "id": 400,
                 "category": "Eligible jobholders",
-                "employee_id": 1078,
+                "employee_id": 1202,
                 "period_type": "Weekly",
                 "gross_qualifying_earnings": 1200.0,
                 "pensionable_earnings": 1000.0,
                 "company_percentage": 2.0,
                 "employee_percentage": 3.0,
                 "state": "created",
-                "created_at": "2018-04-19T13:57:44.000+01:00",
-                "updated_at": "2018-04-19T13:57:44.000+01:00",
+                "created_at": "2018-04-19T14:33:53.000+01:00",
+                "updated_at": "2018-04-19T14:33:53.000+01:00",
                 "contribute_if_entitled": true,
                 "company_amount": 1.0,
                 "employee_amount": 1.0,
@@ -1975,7 +1976,7 @@
                   {
                     "rel": "employee",
                     "title": "employee",
-                    "href": "https://api.host.com/companies/2242/employees/1078"
+                    "href": "https://api.host.com/companies/2486/employees/1202"
                   }
                 ]
               }
@@ -2099,32 +2100,32 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2249/employees/1085/contributions?contribution%5Baction%5D=index"
+                    "href": "http://api.example.com/companies/2493/employees/1209/contributions?contribution%5Baction%5D=index"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2249/employees/1085/contributions?contribution%5Baction%5D=index&offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2493/employees/1209/contributions?contribution%5Baction%5D=index&offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2249/employees/1085/contributions?contribution%5Baction%5D=index&offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2493/employees/1209/contributions?contribution%5Baction%5D=index&offset=0&limit=50"
                   }
                 ],
                 "contributions": [
                   {
-                    "id": 358,
+                    "id": 406,
                     "category": "Eligible jobholders",
-                    "employee_id": 1085,
+                    "employee_id": 1209,
                     "period_type": "Weekly",
                     "gross_qualifying_earnings": 1000.0,
                     "pensionable_earnings": 1000.0,
                     "company_percentage": 2.0,
                     "employee_percentage": 3.0,
                     "state": "created",
-                    "created_at": "2018-04-19T13:57:49.000+01:00",
-                    "updated_at": "2018-04-19T13:57:49.000+01:00",
+                    "created_at": "2018-04-19T14:33:58.000+01:00",
+                    "updated_at": "2018-04-19T14:33:58.000+01:00",
                     "contribute_if_entitled": true,
                     "company_amount": 20.0,
                     "employee_amount": 30.0,
@@ -2140,22 +2141,22 @@
                       {
                         "rel": "employee",
                         "title": "employee",
-                        "href": "https://api.host.com/companies/2249/employees/1085"
+                        "href": "https://api.host.com/companies/2493/employees/1209"
                       }
                     ]
                   },
                   {
-                    "id": 359,
+                    "id": 407,
                     "category": "Eligible jobholders",
-                    "employee_id": 1085,
+                    "employee_id": 1209,
                     "period_type": "Weekly",
                     "gross_qualifying_earnings": 1000.0,
                     "pensionable_earnings": 1000.0,
                     "company_percentage": 2.0,
                     "employee_percentage": 3.0,
                     "state": "created",
-                    "created_at": "2018-04-19T13:57:49.000+01:00",
-                    "updated_at": "2018-04-19T13:57:49.000+01:00",
+                    "created_at": "2018-04-19T14:33:58.000+01:00",
+                    "updated_at": "2018-04-19T14:33:58.000+01:00",
                     "contribute_if_entitled": true,
                     "company_amount": 20.0,
                     "employee_amount": 30.0,
@@ -2171,7 +2172,7 @@
                       {
                         "rel": "employee",
                         "title": "employee",
-                        "href": "https://api.host.com/companies/2249/employees/1085"
+                        "href": "https://api.host.com/companies/2493/employees/1209"
                       }
                     ]
                   }
@@ -2308,17 +2309,17 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 356,
+                "id": 404,
                 "category": "Eligible jobholders",
-                "employee_id": 1083,
+                "employee_id": 1207,
                 "period_type": "Weekly",
                 "gross_qualifying_earnings": 1000.0,
                 "pensionable_earnings": 1000.0,
                 "company_percentage": 2.0,
                 "employee_percentage": 3.0,
                 "state": "created",
-                "created_at": "2018-04-19T13:57:48.000+01:00",
-                "updated_at": "2018-04-19T13:57:48.000+01:00",
+                "created_at": "2018-04-19T14:33:57.000+01:00",
+                "updated_at": "2018-04-19T14:33:57.000+01:00",
                 "contribute_if_entitled": true,
                 "company_amount": 20.0,
                 "employee_amount": 30.0,
@@ -2334,7 +2335,7 @@
                   {
                     "rel": "employee",
                     "title": "employee",
-                    "href": "https://api.host.com/companies/2247/employees/1083"
+                    "href": "https://api.host.com/companies/2491/employees/1207"
                   }
                 ]
               }
@@ -2479,23 +2480,23 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1091,
+                "id": 1215,
                 "email": null,
                 "reset_password_token": null,
                 "reset_password_sent_at": null,
                 "remember_created_at": null,
                 "last_sign_in_at": null,
                 "slug": "fsurname",
-                "created_at": "2018-04-19T13:57:53.000+01:00",
-                "updated_at": "2018-04-19T13:57:53.000+01:00",
+                "created_at": "2018-04-19T14:34:02.000+01:00",
+                "updated_at": "2018-04-19T14:34:02.000+01:00",
                 "confirmation_token": null,
-                "gauth_secret": "v5y34tvsz5ruu64uvdispticniqoo6ui2rj57hryx272oz4uurgis2wex7iaafeg",
+                "gauth_secret": "r3mdf6shnznc2s6vbf6jadgfzcghmxod342dgax4rg5qdu7f46tnq3qkoay2zzq4",
                 "gauth_enabled": false,
                 "gauth_tmp": null,
                 "forename": "forename",
                 "surname": "surname",
                 "title": null,
-                "authentication_token": "rWQT_-8S7nY_YzPC4cRY",
+                "authentication_token": "iRxzJvVGxS-kaA_j3yHL",
                 "date_of_birth": "2018-04-18",
                 "group_id": null,
                 "line2": null,
@@ -2507,7 +2508,7 @@
                 "national_insurance_number": null,
                 "works_in_uk": true,
                 "starts_on": "2016-01-01",
-                "authentication_token_generated_at": "2018-04-19T13:57:53.000+01:00",
+                "authentication_token_generated_at": "2018-04-19T14:34:02.000+01:00",
                 "male": true,
                 "company_percentage": 2.0,
                 "company_percentage_matched": 2.0,
@@ -2522,8 +2523,8 @@
                 "opt_state": "ignition",
                 "opt_in_on": null,
                 "opt_out_window_starts_on": null,
-                "company_id": 2255,
-                "api_key": "RwHngzVAIJss8kcBigf-pg",
+                "company_id": 2499,
+                "api_key": "0qF_8Qr6NdwdaZezkT99dQ",
                 "automatically_enrolled": false,
                 "external_id": null,
                 "fund_id": null,
@@ -2534,7 +2535,7 @@
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2255"
+                    "href": "https://api.host.com/companies/2499"
                   }
                 ]
               }
@@ -2667,38 +2668,38 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2262/employees?include%5B%5D=contributions"
+                    "href": "http://api.example.com/companies/2506/employees?include%5B%5D=contributions"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2262/employees?include%5B%5D=contributions&offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2506/employees?include%5B%5D=contributions&offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2262/employees?include%5B%5D=contributions&offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2506/employees?include%5B%5D=contributions&offset=0&limit=50"
                   }
                 ],
                 "employees": [
                   {
-                    "id": 1097,
+                    "id": 1221,
                     "email": "m1@example.com",
                     "reset_password_token": null,
                     "reset_password_sent_at": null,
                     "remember_created_at": null,
                     "last_sign_in_at": null,
                     "slug": "fsurname",
-                    "created_at": "2018-04-19T13:57:57.000+01:00",
-                    "updated_at": "2018-04-19T13:57:57.000+01:00",
+                    "created_at": "2018-04-19T14:34:06.000+01:00",
+                    "updated_at": "2018-04-19T14:34:06.000+01:00",
                     "confirmation_token": null,
-                    "gauth_secret": "bdyymraqnwplsnylcao5ify2lma3t3wkgvdwdcp2z6ubtnwip3azn43m3cvdepna",
+                    "gauth_secret": "2e5nglhg4aaygzt3l45zol7kiesvqhn6dnr3rn2zn5pe3hsoyixo4u2mchizpyth",
                     "gauth_enabled": false,
                     "gauth_tmp": null,
                     "forename": "forename",
                     "surname": "surname",
                     "title": null,
-                    "authentication_token": "4d66MwUDwvoaJJACoCr9",
+                    "authentication_token": "PHZpok9t_8tkgGNMPZVd",
                     "date_of_birth": "1996-04-19",
                     "group_id": null,
                     "line2": null,
@@ -2710,7 +2711,7 @@
                     "national_insurance_number": null,
                     "works_in_uk": true,
                     "starts_on": "2018-04-19",
-                    "authentication_token_generated_at": "2018-04-19T13:57:57.000+01:00",
+                    "authentication_token_generated_at": "2018-04-19T14:34:06.000+01:00",
                     "male": true,
                     "company_percentage": 2.0,
                     "company_percentage_matched": 2.0,
@@ -2725,8 +2726,8 @@
                     "opt_state": "ignition",
                     "opt_in_on": null,
                     "opt_out_window_starts_on": null,
-                    "company_id": 2262,
-                    "api_key": "GhJEk_1RdrfR1EHeAhM0rw",
+                    "company_id": 2506,
+                    "api_key": "4btaO8ykhE-PHvG0ynoRpw",
                     "automatically_enrolled": false,
                     "external_id": null,
                     "fund_id": null,
@@ -2737,7 +2738,7 @@
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2262"
+                        "href": "https://api.host.com/companies/2506"
                       }
                     ],
                     "contribution_ids": [
@@ -2745,23 +2746,23 @@
                     ]
                   },
                   {
-                    "id": 1098,
+                    "id": 1222,
                     "email": "m2@example.com",
                     "reset_password_token": null,
                     "reset_password_sent_at": null,
                     "remember_created_at": null,
                     "last_sign_in_at": null,
-                    "slug": "fsurname5",
-                    "created_at": "2018-04-19T13:57:57.000+01:00",
-                    "updated_at": "2018-04-19T13:57:57.000+01:00",
+                    "slug": "fsurname3",
+                    "created_at": "2018-04-19T14:34:06.000+01:00",
+                    "updated_at": "2018-04-19T14:34:06.000+01:00",
                     "confirmation_token": null,
-                    "gauth_secret": "nwcabdeyvdjipmx2lknfp24c33p5u5vaabpqsysorhhaid2352zkslnq5cnh4757",
+                    "gauth_secret": "wzyj2rmxfzx7wtpduz63ed5rickgake7kwqtcnuhlao5zijjwhd7b5fhvwygz4au",
                     "gauth_enabled": false,
                     "gauth_tmp": null,
                     "forename": "forename",
                     "surname": "surname",
                     "title": null,
-                    "authentication_token": "JKpi_c5Vp2KCTjrGq3yH",
+                    "authentication_token": "nBXfzv-eVUTxRR9NwsPU",
                     "date_of_birth": "1996-04-19",
                     "group_id": null,
                     "line2": null,
@@ -2773,7 +2774,7 @@
                     "national_insurance_number": null,
                     "works_in_uk": true,
                     "starts_on": "2018-04-19",
-                    "authentication_token_generated_at": "2018-04-19T13:57:57.000+01:00",
+                    "authentication_token_generated_at": "2018-04-19T14:34:06.000+01:00",
                     "male": true,
                     "company_percentage": 2.0,
                     "company_percentage_matched": 2.0,
@@ -2788,8 +2789,8 @@
                     "opt_state": "ignition",
                     "opt_in_on": null,
                     "opt_out_window_starts_on": null,
-                    "company_id": 2262,
-                    "api_key": "_9cQnJX6pwWc2th4dLlwkg",
+                    "company_id": 2506,
+                    "api_key": "fdD3y0IYL8gtZJDV26mK-g",
                     "automatically_enrolled": false,
                     "external_id": null,
                     "fund_id": null,
@@ -2800,7 +2801,7 @@
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2262"
+                        "href": "https://api.host.com/companies/2506"
                       }
                     ],
                     "contribution_ids": [
@@ -2928,23 +2929,23 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1095,
+                "id": 1219,
                 "email": "email@example.com",
                 "reset_password_token": null,
                 "reset_password_sent_at": null,
                 "remember_created_at": null,
                 "last_sign_in_at": null,
                 "slug": "fsurname",
-                "created_at": "2018-04-19T13:57:56.000+01:00",
-                "updated_at": "2018-04-19T13:57:56.000+01:00",
+                "created_at": "2018-04-19T14:34:05.000+01:00",
+                "updated_at": "2018-04-19T14:34:05.000+01:00",
                 "confirmation_token": null,
-                "gauth_secret": "ppqpxhzrbcsttb6yl55uhqvsjpb4z3ka32tacudqdtlnm2v7r5mvsdd3vtacbmio",
+                "gauth_secret": "cmpfkpckpujje5n33bh2ojqses4veiralku3canmuasvst3dry4bc2t6dsss4vk6",
                 "gauth_enabled": false,
                 "gauth_tmp": null,
                 "forename": "forename",
                 "surname": "surname",
                 "title": null,
-                "authentication_token": "WdzKhkLHx1aiqp_VzYf5",
+                "authentication_token": "WjT8_b8xHHVoTjym1Ai9",
                 "date_of_birth": "1996-04-19",
                 "group_id": null,
                 "line2": null,
@@ -2956,7 +2957,7 @@
                 "national_insurance_number": null,
                 "works_in_uk": true,
                 "starts_on": "2018-04-19",
-                "authentication_token_generated_at": "2018-04-19T13:57:56.000+01:00",
+                "authentication_token_generated_at": "2018-04-19T14:34:05.000+01:00",
                 "male": true,
                 "company_percentage": 2.0,
                 "company_percentage_matched": 2.0,
@@ -2971,8 +2972,8 @@
                 "opt_state": "ignition",
                 "opt_in_on": null,
                 "opt_out_window_starts_on": null,
-                "company_id": 2260,
-                "api_key": "iimyPEoILk1zYPOVyjP1ow",
+                "company_id": 2504,
+                "api_key": "bmOgSAq022jTin91nADZsg",
                 "automatically_enrolled": false,
                 "external_id": null,
                 "fund_id": null,
@@ -2983,7 +2984,7 @@
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2260"
+                    "href": "https://api.host.com/companies/2504"
                   }
                 ],
                 "contribution_ids": [
@@ -3188,7 +3189,7 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1100,
+                "id": 1224,
                 "value": "ignition",
                 "opt_in_on": null,
                 "opt_out_on": null,
@@ -3255,19 +3256,19 @@
             "description": "Creates a postponement",
             "examples": {
               "application/json": {
-                "id": 177,
-                "employee_id": 1101,
+                "id": 204,
+                "employee_id": 1225,
                 "starts_on": "2018-04-19",
                 "ends_on": "2018-04-19",
-                "created_at": "2018-04-19T13:57:59.000+01:00",
-                "updated_at": "2018-04-19T13:57:59.000+01:00",
+                "created_at": "2018-04-19T14:34:07.000+01:00",
+                "updated_at": "2018-04-19T14:34:07.000+01:00",
                 "deferral_on": "2018-04-20",
                 "cancelled_at": null,
                 "links": [
                   {
                     "rel": "employee",
                     "title": "employee",
-                    "href": "https://api.host.com/companies/2265/employees/1101"
+                    "href": "https://api.host.com/companies/2509/employees/1225"
                   }
                 ]
               }
@@ -3350,17 +3351,17 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2272/employees/1108/postponements"
+                    "href": "http://api.example.com/companies/2516/employees/1232/postponements"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2272/employees/1108/postponements?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2516/employees/1232/postponements?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2272/employees/1108/postponements?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2516/employees/1232/postponements?offset=0&limit=50"
                   }
                 ],
                 "postponements": [
@@ -3498,19 +3499,19 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 181,
-                "employee_id": 1106,
+                "id": 208,
+                "employee_id": 1230,
                 "starts_on": "2018-04-01",
                 "ends_on": "2018-04-01",
-                "created_at": "2018-04-19T13:58:01.000+01:00",
-                "updated_at": "2018-04-19T13:58:01.000+01:00",
+                "created_at": "2018-04-19T14:34:10.000+01:00",
+                "updated_at": "2018-04-19T14:34:10.000+01:00",
                 "deferral_on": "2018-04-02",
                 "cancelled_at": null,
                 "links": [
                   {
                     "rel": "employee",
                     "title": "employee",
-                    "href": "https://api.host.com/companies/2270/employees/1106"
+                    "href": "https://api.host.com/companies/2514/employees/1230"
                   }
                 ]
               }
@@ -3680,19 +3681,19 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1217,
-                "company_id": 2279,
+                "id": 1421,
+                "company_id": 2523,
                 "event_on": "2018-04-19",
                 "next_re_declaration_of_compliance_deadline_on": "2021-09-18",
                 "next_re_enrolment_window_starts_on": "2021-01-19",
                 "next_re_enrolment_window_ends_on": "2021-07-18",
-                "created_at": "2018-04-19T13:58:05.000+01:00",
-                "updated_at": "2018-04-19T13:58:05.000+01:00",
+                "created_at": "2018-04-19T14:34:14.000+01:00",
+                "updated_at": "2018-04-19T14:34:14.000+01:00",
                 "links": [
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2279"
+                    "href": "https://api.host.com/companies/2523"
                   }
                 ]
               }
@@ -3794,51 +3795,51 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2289/enrolments"
+                    "href": "http://api.example.com/companies/2533/enrolments"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2289/enrolments?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2533/enrolments?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2289/enrolments?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2533/enrolments?offset=0&limit=50"
                   }
                 ],
                 "enrolments": [
                   {
-                    "id": 1231,
-                    "company_id": 2289,
+                    "id": 1435,
+                    "company_id": 2533,
                     "event_on": "2015-06-01",
                     "next_re_declaration_of_compliance_deadline_on": "2018-10-31",
                     "next_re_enrolment_window_starts_on": "2018-03-01",
                     "next_re_enrolment_window_ends_on": "2018-08-31",
-                    "created_at": "2018-04-19T13:58:10.000+01:00",
-                    "updated_at": "2018-04-19T13:58:10.000+01:00",
+                    "created_at": "2018-04-19T14:34:19.000+01:00",
+                    "updated_at": "2018-04-19T14:34:19.000+01:00",
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2289"
+                        "href": "https://api.host.com/companies/2533"
                       }
                     ]
                   },
                   {
-                    "id": 1232,
-                    "company_id": 2289,
+                    "id": 1436,
+                    "company_id": 2533,
                     "event_on": "2018-04-01",
                     "next_re_declaration_of_compliance_deadline_on": "2021-08-31",
                     "next_re_enrolment_window_starts_on": "2021-01-01",
                     "next_re_enrolment_window_ends_on": "2021-06-30",
-                    "created_at": "2018-04-19T13:58:11.000+01:00",
-                    "updated_at": "2018-04-19T13:58:11.000+01:00",
+                    "created_at": "2018-04-19T14:34:19.000+01:00",
+                    "updated_at": "2018-04-19T14:34:19.000+01:00",
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2289"
+                        "href": "https://api.host.com/companies/2533"
                       }
                     ]
                   }
@@ -3957,19 +3958,19 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1229,
-                "company_id": 2287,
+                "id": 1433,
+                "company_id": 2531,
                 "event_on": "2018-04-01",
                 "next_re_declaration_of_compliance_deadline_on": "2021-08-31",
                 "next_re_enrolment_window_starts_on": "2021-01-01",
                 "next_re_enrolment_window_ends_on": "2021-06-30",
-                "created_at": "2018-04-19T13:58:10.000+01:00",
-                "updated_at": "2018-04-19T13:58:10.000+01:00",
+                "created_at": "2018-04-19T14:34:19.000+01:00",
+                "updated_at": "2018-04-19T14:34:19.000+01:00",
                 "links": [
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2287"
+                    "href": "https://api.host.com/companies/2531"
                   }
                 ]
               }
@@ -4127,7 +4128,7 @@
             "description": "Success - Getting a company. You can fetch a company with the company ID or the slug",
             "examples": {
               "application/json": {
-                "id": 2295,
+                "id": 2539,
                 "name": "name",
                 "slug": "name",
                 "registration_number": "number",
@@ -4149,9 +4150,9 @@
                 "pensionable_earning_type": "unbanded",
                 "automatic_postponement_period": null,
                 "default_percentage": 2.0,
-                "employer_pension_scheme_registration": "SMART10002295",
-                "created_at": "2018-04-19T13:58:16.000+01:00",
-                "updated_at": "2018-04-19T13:58:16.000+01:00",
+                "employer_pension_scheme_registration": "SMART10002539",
+                "created_at": "2018-04-19T14:34:24.000+01:00",
+                "updated_at": "2018-04-19T14:34:24.000+01:00",
                 "state": "active",
                 "contribution_charge_id": 1
               }
@@ -4314,25 +4315,25 @@
             "description": "Success - Import a Papdis file (xml format)",
             "examples": {
               "application/json": {
-                "id": 218,
+                "id": 242,
                 "status_code": null,
                 "state": "ignition",
                 "response_errors": [
 
                 ],
-                "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/218/original/valid.xml",
+                "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/242/original/valid.xml",
                 "file_file_name": "valid.xml",
-                "created_at": "2018-04-19T13:58:17.000+01:00",
-                "updated_at": "2018-04-19T13:58:17.000+01:00",
+                "created_at": "2018-04-19T14:34:25.000+01:00",
+                "updated_at": "2018-04-19T14:34:25.000+01:00",
                 "type": "PapdisImport",
                 "metadata": {
                 },
-                "company_id": 2299,
+                "company_id": 2543,
                 "links": [
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2299"
+                    "href": "https://api.host.com/companies/2543"
                   }
                 ],
                 "response": [
@@ -4412,45 +4413,45 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2305/imports"
+                    "href": "http://api.example.com/companies/2549/imports"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2305/imports?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2549/imports?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2305/imports?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2549/imports?offset=0&limit=50"
                   }
                 ],
                 "data": [
                   {
-                    "id": 223,
+                    "id": 247,
                     "status_code": null,
                     "state": "success",
                     "response_errors": [
 
                     ],
-                    "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/223/original/valid.csv",
+                    "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/247/original/valid.csv",
                     "file_file_name": "valid.csv",
-                    "created_at": "2018-04-19T13:58:18.000+01:00",
-                    "updated_at": "2018-04-19T13:58:18.000+01:00",
+                    "created_at": "2018-04-19T14:34:27.000+01:00",
+                    "updated_at": "2018-04-19T14:34:27.000+01:00",
                     "type": "PapdisImport",
                     "metadata": {
                     },
-                    "company_id": 2305,
+                    "company_id": 2549,
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2305"
+                        "href": "https://api.host.com/companies/2549"
                       }
                     ],
                     "response": [
                       {
-                        "importable_id": 2305,
+                        "importable_id": 2549,
                         "importable_type": "Company",
                         "employee_id": null,
                         "external_id": null,
@@ -4466,30 +4467,30 @@
                     ]
                   },
                   {
-                    "id": 224,
+                    "id": 248,
                     "status_code": null,
                     "state": "success",
                     "response_errors": [
 
                     ],
-                    "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/224/original/valid.csv",
+                    "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/248/original/valid.csv",
                     "file_file_name": "valid.csv",
-                    "created_at": "2018-04-19T13:58:18.000+01:00",
-                    "updated_at": "2018-04-19T13:58:19.000+01:00",
+                    "created_at": "2018-04-19T14:34:27.000+01:00",
+                    "updated_at": "2018-04-19T14:34:27.000+01:00",
                     "type": "PapdisImport",
                     "metadata": {
                     },
-                    "company_id": 2305,
+                    "company_id": 2549,
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2305"
+                        "href": "https://api.host.com/companies/2549"
                       }
                     ],
                     "response": [
                       {
-                        "importable_id": 2305,
+                        "importable_id": 2549,
                         "importable_type": "Company",
                         "employee_id": null,
                         "external_id": null,
@@ -4505,25 +4506,25 @@
                     ]
                   },
                   {
-                    "id": 225,
+                    "id": 249,
                     "status_code": null,
                     "state": "ignition",
                     "response_errors": [
 
                     ],
-                    "file_url": "/Users/gpalozzi/Work/code/api/public/system/employees_imports/files/000/000/225/original/valid.csv",
+                    "file_url": "/Users/gpalozzi/Work/code/api/public/system/employees_imports/files/000/000/249/original/valid.csv",
                     "file_file_name": "valid.csv",
-                    "created_at": "2018-04-19T13:58:18.000+01:00",
-                    "updated_at": "2018-04-19T13:58:18.000+01:00",
+                    "created_at": "2018-04-19T14:34:27.000+01:00",
+                    "updated_at": "2018-04-19T14:34:27.000+01:00",
                     "type": "EmployeesImport",
                     "metadata": {
                     },
-                    "company_id": 2305,
+                    "company_id": 2549,
                     "links": [
                       {
                         "rel": "company",
                         "title": "company",
-                        "href": "https://api.host.com/companies/2305"
+                        "href": "https://api.host.com/companies/2549"
                       }
                     ],
                     "response": [
@@ -4581,30 +4582,30 @@
             "description": "Success - Import successfully processed",
             "examples": {
               "application/json": {
-                "id": 220,
+                "id": 244,
                 "status_code": null,
                 "state": "success",
                 "response_errors": [
 
                 ],
-                "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/220/original/valid.csv",
+                "file_url": "/Users/gpalozzi/Work/code/api/public/system/papdis_imports/files/000/000/244/original/valid.csv",
                 "file_file_name": "valid.csv",
-                "created_at": "2018-04-19T13:58:18.000+01:00",
-                "updated_at": "2018-04-19T13:58:18.000+01:00",
+                "created_at": "2018-04-19T14:34:26.000+01:00",
+                "updated_at": "2018-04-19T14:34:26.000+01:00",
                 "type": "PapdisImport",
                 "metadata": {
                 },
-                "company_id": 2302,
+                "company_id": 2546,
                 "links": [
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2302"
+                    "href": "https://api.host.com/companies/2546"
                   }
                 ],
                 "response": [
                   {
-                    "importable_id": 2302,
+                    "importable_id": 2546,
                     "importable_type": "Company",
                     "employee_id": null,
                     "external_id": null,
@@ -4681,23 +4682,23 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2304/imports/222/import_results"
+                    "href": "http://api.example.com/companies/2548/imports/246/import_results"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2304/imports/222/import_results?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2548/imports/246/import_results?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2304/imports/222/import_results?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2548/imports/246/import_results?offset=0&limit=50"
                   }
                 ],
                 "import_results": [
                   {
-                    "id": 85,
-                    "import_id": 222,
+                    "id": 95,
+                    "import_id": 246,
                     "cached_name": null,
                     "operation": "manage_employee",
                     "operation_errors": [
@@ -4706,8 +4707,8 @@
                     "resource_id": null,
                     "resource_type": null,
                     "state": "success",
-                    "created_at": "2018-04-19T13:58:18.000+01:00",
-                    "updated_at": "2018-04-19T13:58:18.000+01:00"
+                    "created_at": "2018-04-19T14:34:27.000+01:00",
+                    "updated_at": "2018-04-19T14:34:27.000+01:00"
                   }
                 ]
               }
@@ -4761,47 +4762,47 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2306/opt_in_requests"
+                    "href": "http://api.example.com/companies/2550/opt_in_requests"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2306/opt_in_requests?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2550/opt_in_requests?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2306/opt_in_requests?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2550/opt_in_requests?offset=0&limit=50"
                   }
                 ],
                 "opt_in_requests": [
                   {
-                    "id": 74,
+                    "id": 82,
                     "approved": false,
                     "reviewed_at": null,
-                    "employee_id": 1117,
-                    "created_at": "2018-04-19T13:58:19.000+01:00",
-                    "updated_at": "2018-04-19T13:58:19.000+01:00",
+                    "employee_id": 1241,
+                    "created_at": "2018-04-19T14:34:27.000+01:00",
+                    "updated_at": "2018-04-19T14:34:27.000+01:00",
                     "links": [
                       {
                         "rel": "employee",
                         "title": "employee",
-                        "href": "https://api.host.com/companies/2306/employees/1117"
+                        "href": "https://api.host.com/companies/2550/employees/1241"
                       }
                     ]
                   },
                   {
-                    "id": 75,
+                    "id": 83,
                     "approved": false,
                     "reviewed_at": null,
-                    "employee_id": 1118,
-                    "created_at": "2018-04-19T13:58:19.000+01:00",
-                    "updated_at": "2018-04-19T13:58:19.000+01:00",
+                    "employee_id": 1242,
+                    "created_at": "2018-04-19T14:34:28.000+01:00",
+                    "updated_at": "2018-04-19T14:34:28.000+01:00",
                     "links": [
                       {
                         "rel": "employee",
                         "title": "employee",
-                        "href": "https://api.host.com/companies/2306/employees/1118"
+                        "href": "https://api.host.com/companies/2550/employees/1242"
                       }
                     ]
                   }
@@ -4857,34 +4858,34 @@
                   {
                     "rel": "self",
                     "title": "self",
-                    "href": "http://api.example.com/companies/2307/postponements"
+                    "href": "http://api.example.com/companies/2551/postponements"
                   },
                   {
                     "rel": "first",
                     "title": "first",
-                    "href": "http://api.example.com/companies/2307/postponements?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2551/postponements?offset=0&limit=50"
                   },
                   {
                     "rel": "last",
                     "title": "last",
-                    "href": "http://api.example.com/companies/2307/postponements?offset=0&limit=50"
+                    "href": "http://api.example.com/companies/2551/postponements?offset=0&limit=50"
                   }
                 ],
                 "postponements": [
                   {
-                    "id": 187,
-                    "employee_id": 1119,
+                    "id": 214,
+                    "employee_id": 1243,
                     "starts_on": "2018-04-01",
                     "ends_on": "2018-04-01",
-                    "created_at": "2018-04-19T13:58:19.000+01:00",
-                    "updated_at": "2018-04-19T13:58:19.000+01:00",
+                    "created_at": "2018-04-19T14:34:28.000+01:00",
+                    "updated_at": "2018-04-19T14:34:28.000+01:00",
                     "deferral_on": "2018-04-02",
                     "cancelled_at": null,
                     "links": [
                       {
                         "rel": "employee",
                         "title": "employee",
-                        "href": "https://api.host.com/companies/2307/employees/1119"
+                        "href": "https://api.host.com/companies/2551/employees/1243"
                       }
                     ]
                   }
@@ -4926,22 +4927,22 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1286,
+                "id": 1494,
                 "email": "signatory@example.com",
                 "reset_password_token": null,
                 "reset_password_sent_at": null,
                 "remember_created_at": null,
                 "last_sign_in_at": null,
                 "slug": "fsurname",
-                "created_at": "2018-04-19T13:58:24.000+01:00",
-                "updated_at": "2018-04-19T13:58:24.000+01:00",
-                "gauth_secret": "dxliwytic7fhunqoxse7lxcbc3z4abuymtqehpsppvz4ni47wf3dm4tfjjrzrzrx",
+                "created_at": "2018-04-19T14:34:33.000+01:00",
+                "updated_at": "2018-04-19T14:34:33.000+01:00",
+                "gauth_secret": "sv2lvyygoz4c4lrtygfbfyysq5dopiw3ffezb7hjcar7guyqwxu7ae5jt7iodg2d",
                 "gauth_enabled": false,
                 "gauth_tmp": null,
                 "forename": "forename",
                 "surname": "surname",
                 "title": null,
-                "authentication_token": "2zYTj2paRsrrtWf488BV",
+                "authentication_token": "k7XWycxMZX8cfRuozBJK",
                 "date_of_birth": null,
                 "line2": null,
                 "city": null,
@@ -4956,19 +4957,19 @@
                 "referral_state": "ignition",
                 "referral_clicks": 0,
                 "referral_reward_name": null,
-                "authentication_token_generated_at": "2018-04-19T13:58:24.000+01:00",
+                "authentication_token_generated_at": "2018-04-19T14:34:33.000+01:00",
                 "male": true,
                 "role": "signatory",
                 "middlename": null,
                 "envelope_state": "ignition",
                 "enforce_password": false,
-                "company_id": 2312,
-                "api_key": "giFFbVgIOzwlQnM2cushGw",
+                "company_id": 2556,
+                "api_key": "C6TF1uX6Oz-Pfyet-ekKGA",
                 "links": [
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2312"
+                    "href": "https://api.host.com/companies/2556"
                   }
                 ]
               }
@@ -5014,23 +5015,23 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 1121,
+                "id": 1245,
                 "email": "email@example.com",
                 "reset_password_token": null,
                 "reset_password_sent_at": null,
                 "remember_created_at": null,
                 "last_sign_in_at": null,
                 "slug": "fsurname",
-                "created_at": "2018-04-19T13:58:24.000+01:00",
-                "updated_at": "2018-04-19T13:58:24.000+01:00",
+                "created_at": "2018-04-19T14:34:34.000+01:00",
+                "updated_at": "2018-04-19T14:34:34.000+01:00",
                 "confirmation_token": null,
-                "gauth_secret": "5ht5arpxpii6alcehyj2ybvn53urvu7ua3puw4tzww2j7jvjjib72gufwdyn7q2s",
+                "gauth_secret": "sfwyqly3har4x2hnfzwlpfktto76tsgh6kg7vxudemrdrjpcms7kt5trjrukajpq",
                 "gauth_enabled": false,
                 "gauth_tmp": null,
                 "forename": "forename",
                 "surname": "surname",
                 "title": null,
-                "authentication_token": "TtjjaReyJGKqm8HL4DqL",
+                "authentication_token": "LsAeBUa6M6-ZLSrH82cc",
                 "date_of_birth": "1996-04-19",
                 "group_id": null,
                 "line2": null,
@@ -5042,7 +5043,7 @@
                 "national_insurance_number": null,
                 "works_in_uk": true,
                 "starts_on": "2018-04-19",
-                "authentication_token_generated_at": "2018-04-19T13:58:24.000+01:00",
+                "authentication_token_generated_at": "2018-04-19T14:34:34.000+01:00",
                 "male": true,
                 "company_percentage": 2.0,
                 "company_percentage_matched": 2.0,
@@ -5057,8 +5058,8 @@
                 "opt_state": "ignition",
                 "opt_in_on": null,
                 "opt_out_window_starts_on": null,
-                "company_id": 2313,
-                "api_key": "JXNnww4T1JzlI6wOUwyWpQ",
+                "company_id": 2557,
+                "api_key": "Lk70J8hHhanz9LfbU1gTxg",
                 "automatically_enrolled": false,
                 "external_id": null,
                 "fund_id": null,
@@ -5069,7 +5070,7 @@
                   {
                     "rel": "company",
                     "title": "company",
-                    "href": "https://api.host.com/companies/2313"
+                    "href": "https://api.host.com/companies/2557"
                   }
                 ]
               }
@@ -8108,21 +8109,21 @@
             "description": "Success",
             "examples": {
               "application/json": {
-                "id": 429,
+                "id": 493,
                 "email": "email@example.com",
                 "title": null,
                 "forename": "forename",
                 "surname": "surname",
-                "api_key": "xZLUNiX26y-PsY5Fl-sEag",
+                "api_key": "CrRGUI4bbPEMAfIB5QG5OQ",
                 "telephone": "0123456789",
-                "adviser_id": 438,
-                "created_at": "2018-04-19T13:58:25.000+01:00",
-                "updated_at": "2018-04-19T13:58:25.000+01:00",
+                "adviser_id": 490,
+                "created_at": "2018-04-19T14:34:35.000+01:00",
+                "updated_at": "2018-04-19T14:34:35.000+01:00",
                 "links": [
                   {
                     "rel": "adviser",
                     "title": "adviser",
-                    "href": "https://api.host.com/advisers/438"
+                    "href": "https://api.host.com/advisers/490"
                   }
                 ]
               }
