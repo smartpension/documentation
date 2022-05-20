@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    github.com/project-slug: smartpension/documentation
+  name: documentation
+spec:
+  lifecycle: production
+  owner: engineering
+  type: service
